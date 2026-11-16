@@ -3,9 +3,9 @@
 **Ask:** "I need a mascot, a one-eyed knitted bear called Bramble. Show it with a kid
 reading, and then a version where it wears a scarf."
 
-**Mode:** a character sheet, then a two-reference scene, then a multi-round edit. Three
-failure modes are in play: an asymmetric detail (one eye), two people in the scene, and
-drift across edits.
+**Mode:** a character sheet, then a two-reference scene, then a multi-round edit. Two
+things to manage: an asymmetric detail (one eye, and which side it lands on), and drift across
+edits.
 
 ## 1. Character sheet (`bramble.txt`)
 
@@ -66,19 +66,25 @@ python skills/seedream-5-5/scripts/seedream.py generate --prompt-file scarf.txt 
 
 - The one-eye asymmetry held in all three images, and the scene kept both identities apart.
 - The edit changed only the scarf. Face, pose, room, light and framing stayed the same.
-- **One miss, and it taught us something.** The sheet put the button on the *viewer's* left even
-  though the prompt said "the toy's left", while the knee patch landed on the toy's own left. So
-  the edit prompt stopped naming a side and said "exactly where they are in Image 1". The skill
-  now tells agents to name sides from the viewer's point of view.
+- **One miss, and it taught us something.** The sheet put the button eye on the *viewer's* left
+  even though the prompt said "the toy's left". The knee patch in the same prompt did land on
+  the toy's own left. Follow-up tests found the same pattern: one-sided details on a face or
+  body came out mirrored in 3 of 4 tries, while layout positions ("on the image-left of the
+  frame") held. So the edit prompt said "exactly where they are in Image 1" instead of naming a
+  side, and the skill now says: check small one-sided details, and mirror-flip the image if the
+  side is wrong. See [`evidence/`](../evidence/README.md).
 
 The exact prompts and parameters are in the sidecars in [`assets/gallery/`](../assets/gallery/).
 
 ## Why it works
 
 - The asymmetry is stated in three places: on the character sheet, in every later prompt, and
-  in the exclusions. Each time, the missing eye's side and its replacement are named.
-- Two people at most, each with their own reference, placed by screen position.
+  in the exclusions ("exactly one button eye … no second eye"). That holds the **count**. The
+  **side** comes from the reference image, not from the wording.
+- Each person has their own reference and a screen position. Our tests kept up to 5 people
+  distinct, so this is good practice rather than a hard limit.
 - The edit makes one change, repeats the full keep-list, and re-attaches the original sheet
   as an identity reference.
 - The sidecars `reading.txt` and `reading_scarf.txt` record which file was Image 1 and which
-  was Image 2, with hashes, so the edit chain can be audited.
+  was Image 2, with SHA-256 hashes. You can audit your own chain the same way. The full-size
+  originals behind our hashes are not in the repo, only web-sized copies.

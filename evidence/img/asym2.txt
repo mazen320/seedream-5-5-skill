@@ -1,0 +1,33 @@
+# Seedream generation record
+created: 2026-11-15T22:15:44Z
+image: asym2.png (1 of 1)
+model: dola-seedream-5-5-261028
+
+## prompt
+A studio photograph of a small retro tin toy robot standing facing the camera, painted cream and teal, with exactly one red antenna on the image-right side of its head and nothing on the image-left side. Plain white backdrop, soft light. Exclusions: no second antenna, no text.
+
+## parameters
+{
+  "model": "dola-seedream-5-5-261028",
+  "size": "2048x2048",
+  "response_format": "b64_json",
+  "watermark": false
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794780941,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 16384,
+    "total_tokens": 16384
+  },
+  "size": "2048x2048",
+  "output_format": "png",
+  "background": "opaque"
+}

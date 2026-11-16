@@ -1,0 +1,40 @@
+# Seedream generation record
+created: 2026-11-15T22:15:44Z
+image: leak_ignore.png (1 of 1)
+model: dola-seedream-5-5-261028
+
+## prompt
+A photograph of the knitted toy bear from Image 1 sitting on a sunny tropical beach next to a sandcastle, turquoise sea behind, bright midday sun. Image 1 provides only the bear itself: its mustard knitted wool, single button eye, red stitched X, blue knee patch and red scarf. Ignore everything else in Image 1: the child, the room, the window, the cushions, the lamp and the warm indoor lighting.
+
+## parameters
+{
+  "model": "dola-seedream-5-5-261028",
+  "size": "2560x1440",
+  "response_format": "b64_json",
+  "watermark": false
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+[
+  {
+    "source": "reading_scarf.png",
+    "sha256": "698e46e40d62fddf48f16096e50284343e04324dda347d5001ce7b3d8d80c643",
+    "bytes": 5013213,
+    "mime": "image/png"
+  }
+]
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794780940,
+  "usage": {
+    "input_images": 1,
+    "generated_images": 1,
+    "output_tokens": 14400,
+    "total_tokens": 14400
+  },
+  "size": "2560x1440",
+  "output_format": "png",
+  "background": "opaque"
+}

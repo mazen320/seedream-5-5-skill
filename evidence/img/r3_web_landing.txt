@@ -1,0 +1,35 @@
+# Seedream generation record
+created: 2026-11-16T07:46:51Z
+image: web_ledgerly.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+A high-fidelity desktop website landing page design, flat front-on full-browser-width screenshot (no browser chrome, no laptop, no perspective), for a design review. The product is "Ledgerly", bookkeeping software for freelancers.
+Layout top to bottom: a slim white navigation bar with the wordmark "Ledgerly" on the left and the links "Product", "Pricing", "Customers", "Log in" on the right next to a solid indigo button "Start free"; a hero section on a very light lavender background with the left half holding the headline "Books done before your coffee cools" in large bold type over two lines, the sub-line "Invoices, receipts and taxes in one calm place." in grey, and two buttons "Start free" (solid indigo #4F46E5) and "Watch demo" (outlined); the right half holds a floating product dashboard card showing a line chart and the figure "$12,480" labelled "Paid this month"; below the hero a row of five grey placeholder customer logos; then three feature cards in a row titled "Snap receipts", "Auto invoices" and "Tax-ready", each with a small indigo line icon and one grey line of text.
+Style: modern SaaS design, 12-column grid, 1200 px content width centred, generous white space, rounded corners 12 px, a geometric sans-serif typeface, crisp vector edges, subtle soft shadows on cards.
+Every word is spelled exactly as quoted; feature card lines and logos may be short grey placeholder bars instead of words. No browser frame, no device mockup, no watermark, no lorem ipsum.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "A high-fidelity desktop website landing page design, flat front-on full-browser-width screenshot (no browser chrome, no laptop, no perspective), for a design review. The product is \"Ledgerly\", bookkeeping software for freelancers.\nLayout top to bottom: a slim white navigation bar with the wordmark \"Ledgerly\" on the left and the links \"Product\", \"Pricing\", \"Customers\", \"Log in\" on the right next to a solid indigo button \"Start free\"; a hero section on a very light lavender background with the left half holding the headline \"Books done before your coffee cools\" in large bold type over two lines, the sub-line \"Invoices, receipts and taxes in one calm place.\" in grey, and two buttons \"Start free\" (solid indigo #4F46E5) and \"Watch demo\" (outlined); the right half holds a floating product dashboard card showing a line chart and the figure \"$12,480\" labelled \"Paid this month\"; below the hero a row of five grey placeholder customer logos; then three feature cards in a row titled \"Snap receipts\", \"Auto invoices\" and \"Tax-ready\", each with a small indigo line icon and one grey line of text.\nStyle: modern SaaS design, 12-column grid, 1200 px content width centred, generous white space, rounded corners 12 px, a geometric sans-serif typeface, crisp vector edges, subtle soft shadows on cards.\nEvery word is spelled exactly as quoted; feature card lines and logos may be short grey placeholder bars instead of words. No browser frame, no device mockup, no watermark, no lorem ipsum.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "2560x1600"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794815207,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 16000,
+    "total_tokens": 16000
+  }
+}

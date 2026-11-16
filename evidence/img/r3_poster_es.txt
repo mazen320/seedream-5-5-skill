@@ -1,0 +1,42 @@
+# Seedream generation record
+created: 2026-11-16T07:41:18Z
+image: poster_es.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+Image 1 is a finished event poster. Translate only its text into Spanish, keeping each line in the same position, the same cream colour, the same bold condensed typeface and the same relative size:
+"LANTERN STREET" becomes "CALLE DE LOS FAROLILLOS"; "NIGHT MARKET" becomes "MERCADO NOCTURNO"; "14-16 MARCH" becomes "14-16 DE MARZO"; "HARBOUR SQUARE · 6PM TILL LATE" becomes "PLAZA DEL PUERTO · DESDE LAS 18:00".
+Keep the street, lanterns, stalls, colours, lighting and composition exactly as in Image 1. Every word is spelled exactly as quoted and nothing else is written.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "Image 1 is a finished event poster. Translate only its text into Spanish, keeping each line in the same position, the same cream colour, the same bold condensed typeface and the same relative size:\n\"LANTERN STREET\" becomes \"CALLE DE LOS FAROLILLOS\"; \"NIGHT MARKET\" becomes \"MERCADO NOCTURNO\"; \"14-16 MARCH\" becomes \"14-16 DE MARZO\"; \"HARBOUR SQUARE · 6PM TILL LATE\" becomes \"PLAZA DEL PUERTO · DESDE LAS 18:00\".\nKeep the street, lanterns, stalls, colours, lighting and composition exactly as in Image 1. Every word is spelled exactly as quoted and nothing else is written.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "1728x2592",
+  "image": "<inline image>"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+[
+  {
+    "source": "assets/gallery/poster.jpg",
+    "sha256": "cebb5a94d034188d948349c0f57fbfd7c9ff19e5f75500de25aa46e414a5cdb1",
+    "bytes": 254437,
+    "mime": "image/jpeg"
+  }
+]
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794814874,
+  "usage": {
+    "input_images": 1,
+    "generated_images": 1,
+    "output_tokens": 17496,
+    "total_tokens": 17496
+  }
+}

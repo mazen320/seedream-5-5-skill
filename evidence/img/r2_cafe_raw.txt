@@ -1,0 +1,51 @@
+# Seedream generation record
+created: 2026-11-15T22:48:03Z
+image: cafe_edit_v1.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+Image 1 is a photograph of our café, used on our website. Make exactly three edits and nothing else.
+
+Edit 1: On the centre table between the two women, replace only the croissant inside <bbox>578 584 640 634</bbox> with a single triangular slice of rich chocolate layer cake with glossy dark chocolate ganache, sitting on the same small white plate in the same spot. Keep the plate's shape, size, position and shadow, and keep the cups, saucers and table exactly as they are.
+
+Edit 2: On the large black chalkboard on the back wall inside <bbox>251 154 405 306</bbox>, rewrite the two large lines of white chalk lettering. The first line reads "FLAT WHITE 4.50" and the second line reads "CHOCOLATE CAKE 5.80", in the same hand-drawn white chalk capitals, same size, same position and same left alignment as the existing two lines. Every word and number is spelled exactly as quoted. Keep the wooden frame, the faint small chalk scribbles below the two lines, and the board's position unchanged.
+
+Edit 3: Remove the sleeping ginger cat from the windowsill inside <bbox>714 495 780 566</bbox>. Fill the area with the empty wooden windowsill, the window glass and the street view behind it, continuing the existing sunlight and shadows naturally.
+
+Keep everything else exactly as in Image 1: all people, faces, poses and clothing, the barista, the furniture, pendant lamps, plants, checkered floor, windows, street view, door, warm golden late-afternoon lighting, colour grade, framing and camera angle. Same composition and same aspect ratio.
+
+Exclusions: no other changes, no new objects, no extra text anywhere.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "Image 1 is a photograph of our café, used on our website. Make exactly three edits and nothing else.\n\nEdit 1: On the centre table between the two women, replace only the croissant inside <bbox>578 584 640 634</bbox> with a single triangular slice of rich chocolate layer cake with glossy dark chocolate ganache, sitting on the same small white plate in the same spot. Keep the plate's shape, size, position and shadow, and keep the cups, saucers and table exactly as they are.\n\nEdit 2: On the large black chalkboard on the back wall inside <bbox>251 154 405 306</bbox>, rewrite the two large lines of white chalk lettering. The first line reads \"FLAT WHITE 4.50\" and the second line reads \"CHOCOLATE CAKE 5.80\", in the same hand-drawn white chalk capitals, same size, same position and same left alignment as the existing two lines. Every word and number is spelled exactly as quoted. Keep the wooden frame, the faint small chalk scribbles below the two lines, and the board's position unchanged.\n\nEdit 3: Remove the sleeping ginger cat from the windowsill inside <bbox>714 495 780 566</bbox>. Fill the area with the empty wooden windowsill, the window glass and the street view behind it, continuing the existing sunlight and shadows naturally.\n\nKeep everything else exactly as in Image 1: all people, faces, poses and clothing, the barista, the furniture, pendant lamps, plants, checkered floor, windows, street view, door, warm golden late-afternoon lighting, colour grade, framing and camera angle. Same composition and same aspect ratio.\n\nExclusions: no other changes, no new objects, no extra text anywhere.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "2560x1440",
+  "image": "<inline image>",
+  "output_format": "png"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+[
+  {
+    "source": "cafe.jpg",
+    "sha256": "276f48090070d03ac6306fd0037df578527630f1f68d3b6b6ecf6b23ccb0c9b9",
+    "bytes": 710356,
+    "mime": "image/jpeg"
+  }
+]
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794782880,
+  "usage": {
+    "input_images": 1,
+    "generated_images": 1,
+    "output_tokens": 14400,
+    "total_tokens": 14400
+  }
+}

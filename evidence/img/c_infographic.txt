@@ -1,0 +1,33 @@
+# Seedream generation record
+created: 2026-11-15T22:17:49Z
+image: c_infographic.png (1 of 1)
+model: dola-seedream-5-5-261028
+
+## prompt
+A clean 16:9 infographic slide on a white background. Title at the top, left-aligned in bold dark navy: "Coffee Consumption 2026". Below it, a vertical bar chart with exactly four bars of increasing height in teal, labelled underneath from left to right "Q1", "Q2", "Q3", "Q4", with the values "120", "145", "180", "210" printed above each bar. On the right third, three stacked icon rows: a coffee cup icon with the label "62% drink daily", a clock icon with "Peak: 8 AM", and a heart icon with "Oat milk +40%". Flat vector style, thin lines, generous whitespace, one teal accent colour. Every word and number is spelled exactly as quoted and nothing else is written.
+
+## parameters
+{
+  "model": "dola-seedream-5-5-261028",
+  "size": "2560x1440",
+  "response_format": "b64_json",
+  "watermark": false
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794781066,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 14400,
+    "total_tokens": 14400
+  },
+  "size": "2560x1440",
+  "output_format": "png",
+  "background": "opaque"
+}

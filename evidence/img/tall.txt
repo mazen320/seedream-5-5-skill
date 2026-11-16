@@ -1,0 +1,33 @@
+# Seedream generation record
+created: 2026-11-15T22:15:50Z
+image: tall.png (1 of 1)
+model: dola-seedream-5-5-261028
+
+## prompt
+A vertical 9:16 photograph of a lighthouse on a rocky headland at blue hour, the lighthouse on the upper third, waves crashing on the rocks in the lower third, long exposure smoothing the water. Exclusions: no text, no people.
+
+## parameters
+{
+  "model": "dola-seedream-5-5-261028",
+  "size": "1440x2560",
+  "response_format": "b64_json",
+  "watermark": false
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794780941,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 14400,
+    "total_tokens": 14400
+  },
+  "size": "1440x2560",
+  "output_format": "png",
+  "background": "opaque"
+}

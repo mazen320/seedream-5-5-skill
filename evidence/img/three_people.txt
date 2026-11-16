@@ -1,0 +1,33 @@
+# Seedream generation record
+created: 2026-11-15T22:15:40Z
+image: three_people.png (1 of 1)
+model: dola-seedream-5-5-261028
+
+## prompt
+A photorealistic medium-wide shot of three friends sitting on a park bench in autumn, all three clearly different people. On the image-left: a tall man in his seventies with a white beard, a green tweed flat cap and a brown corduroy jacket. In the middle: a woman in her twenties with a shaved head, silver nose ring and a bright orange puffer jacket. On the image-right: a boy of about ten with curly black hair, round glasses and a blue school blazer. They laugh at something off frame. Soft overcast daylight, 35mm lens. Exclusions: no other people, no text.
+
+## parameters
+{
+  "model": "dola-seedream-5-5-261028",
+  "size": "2560x1440",
+  "response_format": "b64_json",
+  "watermark": false
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794780936,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 14400,
+    "total_tokens": 14400
+  },
+  "size": "2560x1440",
+  "output_format": "png",
+  "background": "opaque"
+}

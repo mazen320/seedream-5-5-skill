@@ -1,0 +1,41 @@
+# Seedream layer-decomposition record
+model: dola-seedream-5-5-261028
+provider: byteplus
+
+## prompt
+Split this app screen into editable UI layers: one layer per card, text label, icon, avatar and the tab bar. Name every layer in English.
+
+## request
+{
+  "size": "2K",
+  "layer_decomposition": true,
+  "layer_decomposition_options": {
+    "max_images": 15,
+    "text_recognition": true
+  },
+  "image": "<inline image>"
+}
+
+## response (images omitted)
+seconds: 61.2
+usage: {"input_images": 1, "generated_images": 15, "output_tokens": 245717, "total_tokens": 245717}
+
+## layers (z_index, box in canvas px, name, OCR text)
+[0, null, null, null]
+[1, [60, 0, 336, 236], "Black status bar time text “9:41”", "9:41"]
+[2, [960, 0, 1328, 236], "Black status bar icons: cellular signal, Wi-Fi, battery", null]
+[3, [0, 137, 1047, 536], "Black greeting text “Good morning, Lena”", "Good morning, Lena"]
+[4, [1087, 194, 1363, 470], "Circular female user avatar", null]
+[5, [0, 280, 1391, 1360], "Light mint green rounded weekly stats card", null]
+[6, [742, 536, 1319, 1111], "Green and light gray circular progress ring", null]
+[7, [0, 1105, 533, 1683], "White rounded pace stat card", null]
+[8, [428, 1105, 970, 1683], "White rounded runs stat card", null]
+[9, [853, 1105, 1391, 1683], "White rounded streak stat card", null]
+[10, [0, 1627, 542, 1903], "Black section title text “Recent runs”", "Recent runs"]
+[11, [0, 1643, 1391, 2421], "White rounded Morning loop run record card", null]
+[12, [0, 2023, 1391, 2807], "White rounded Harbour 10K run record card", null]
+[13, [276, 2200, 1374, 2612], "Black text “Harbour 10K” and gray text “10.0 km” on Harbour 10K card", "Harbour 10K\n10.0 km"]
+[14, [0, 2418, 1391, 3015], "White bottom tab bar", null]
+
+## image
+Input: r3_ui_app.jpg (full size). Left: the base plate. Middle: layers 1-14 on green. Right: everything re-stacked (mean difference from the input 2.2/255).

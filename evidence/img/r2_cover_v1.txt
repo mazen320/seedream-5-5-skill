@@ -1,0 +1,56 @@
+# Seedream generation record
+created: 2026-11-15T22:49:22Z
+image: terra_cover_v1.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+The front cover of a high-end printed outdoor and endurance magazine, 3:4 portrait, photographed flat as a finished newsstand issue: a real editorial cover with a full-bleed photograph and crisp printed typography, in the style of a premium monthly.
+
+The cover star is a Kenyan long-distance runner in her mid-thirties with deep brown skin, close-cropped natural black hair, high cheekbones and a lean, athletic build. She is caught mid-laugh, head tilted slightly back, eyes creased, a genuine open-mouthed laugh showing her teeth, one hand resting at her collarbone. She wears a rust-coloured technical running jacket (burnt orange-red, hex #B7472A) in matte ripstop nylon with a half-zip pulled partway down, fine seam taping and a slight sheen where the light catches the shoulders.
+
+She stands outdoors on a red-earth trail in the Kenyan highlands at golden hour. Behind her, softly out of focus, roll green and ochre highland hills in layered ridges, with a few acacia silhouettes and a warm hazy sky fading from amber to pale blue.
+
+Layout: she is framed from the chest up, centred slightly right, her head filling the middle of the frame and overlapping the bottom edge of the masthead so the top of her head sits in front of the letters, as on a real magazine cover. The top band of the sky is clear and uncluttered for the masthead. The left third of the frame beside her shoulder has calm, out-of-focus hills for cover lines.
+
+Texture: real skin with visible pores, a light sheen of sweat on her forehead and cheekbones, fine flyaway texture in her hair, natural laugh lines; slight grain of a printed cover on coated paper.
+
+Lighting: low late-afternoon sun from camera-left behind her, warm 3200K rim light along her cheek, ear and jacket shoulders, with soft fill from a large white bounce in front, and gentle lens flare in the upper left corner.
+
+Camera: medium close-up at eye level, 85mm portrait lens at f/2, shallow depth of field with the background hills rendered as soft creamy bokeh, shot on medium-format digital, editorial magazine retouching that keeps the skin natural.
+
+Style and grade: warm, rich, natural colour with deep earthy reds and golds, soft highlight roll-off, true blacks, a restrained editorial palette of rust, cream white and charcoal.
+
+Exact text, printed on the cover:
+At the very top, spanning almost the full width, the masthead "TERRA" in huge, tall, high-contrast Didone serif capitals in cream white, the largest element on the cover.
+On the left side, under the masthead, a small kicker in a bold spaced sans-serif, rust on a thin cream rule: "THE ALTITUDE ISSUE".
+On the left at mid-height, a pull quote in large elegant italic serif, cream white, with typographic quotation marks, on two lines: "I run" / "to remember".
+Lower on the left, a cover line in a condensed bold sans-serif, cream white, on two lines: "42 KM" / "OF SILENCE".
+In the bottom-left corner, small, in a thin sans-serif, cream white: "ISSUE 12 / AUTUMN 2026".
+Every word is spelled exactly as quoted and nothing else is written.
+
+Exclusions: no other text, no barcode, no price, no logos, no watermark, no plastic or airbrushed skin, no extra people.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "The front cover of a high-end printed outdoor and endurance magazine, 3:4 portrait, photographed flat as a finished newsstand issue: a real editorial cover with a full-bleed photograph and crisp printed typography, in the style of a premium monthly.\n\nThe cover star is a Kenyan long-distance runner in her mid-thirties with deep brown skin, close-cropped natural black hair, high cheekbones and a lean, athletic build. She is caught mid-laugh, head tilted slightly back, eyes creased, a genuine open-mouthed laugh showing her teeth, one hand resting at her collarbone. She wears a rust-coloured technical running jacket (burnt orange-red, hex #B7472A) in matte ripstop nylon with a half-zip pulled partway down, fine seam taping and a slight sheen where the light catches the shoulders.\n\nShe stands outdoors on a red-earth trail in the Kenyan highlands at golden hour. Behind her, softly out of focus, roll green and ochre highland hills in layered ridges, with a few acacia silhouettes and a warm hazy sky fading from amber to pale blue.\n\nLayout: she is framed from the chest up, centred slightly right, her head filling the middle of the frame and overlapping the bottom edge of the masthead so the top of her head sits in front of the letters, as on a real magazine cover. The top band of the sky is clear and uncluttered for the masthead. The left third of the frame beside her shoulder has calm, out-of-focus hills for cover lines.\n\nTexture: real skin with visible pores, a light sheen of sweat on her forehead and cheekbones, fine flyaway texture in her hair, natural laugh lines; slight grain of a printed cover on coated paper.\n\nLighting: low late-afternoon sun from camera-left behind her, warm 3200K rim light along her cheek, ear and jacket shoulders, with soft fill from a large white bounce in front, and gentle lens flare in the upper left corner.\n\nCamera: medium close-up at eye level, 85mm portrait lens at f/2, shallow depth of field with the background hills rendered as soft creamy bokeh, shot on medium-format digital, editorial magazine retouching that keeps the skin natural.\n\nStyle and grade: warm, rich, natural colour with deep earthy reds and golds, soft highlight roll-off, true blacks, a restrained editorial palette of rust, cream white and charcoal.\n\nExact text, printed on the cover:\nAt the very top, spanning almost the full width, the masthead \"TERRA\" in huge, tall, high-contrast Didone serif capitals in cream white, the largest element on the cover.\nOn the left side, under the masthead, a small kicker in a bold spaced sans-serif, rust on a thin cream rule: \"THE ALTITUDE ISSUE\".\nOn the left at mid-height, a pull quote in large elegant italic serif, cream white, with typographic quotation marks, on two lines: \"I run\" / \"to remember\".\nLower on the left, a cover line in a condensed bold sans-serif, cream white, on two lines: \"42 KM\" / \"OF SILENCE\".\nIn the bottom-left corner, small, in a thin sans-serif, cream white: \"ISSUE 12 / AUTUMN 2026\".\nEvery word is spelled exactly as quoted and nothing else is written.\n\nExclusions: no other text, no barcode, no price, no logos, no watermark, no plastic or airbrushed skin, no extra people.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "1860x2480"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794782958,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 18018,
+    "total_tokens": 18018
+  }
+}

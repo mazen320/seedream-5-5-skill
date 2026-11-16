@@ -1,0 +1,32 @@
+# Seedream generation record
+created: 2026-11-16T07:41:14Z
+image: draft_2k.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+A cosy Scandinavian living room at golden hour: a pale oak floor, a low cream bouclé sofa on the image-left, a round travertine coffee table in the centre with a ceramic vase of dried grasses, a large window on the image-right with sheer linen curtains letting warm low sunlight cast long window shadows across the floor. Interior design magazine photo, 24mm lens at eye level, soft natural grade. No people, no text.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "A cosy Scandinavian living room at golden hour: a pale oak floor, a low cream bouclé sofa on the image-left, a round travertine coffee table in the centre with a ceramic vase of dried grasses, a large window on the image-right with sheer linen curtains letting warm low sunlight cast long window shadows across the floor. Interior design magazine photo, 24mm lens at eye level, soft natural grade. No people, no text.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "2K"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794814870,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 16224,
+    "total_tokens": 16224
+  }
+}

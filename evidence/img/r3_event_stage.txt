@@ -1,0 +1,34 @@
+# Seedream generation record
+created: 2026-11-16T07:58:05Z
+image: stage.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+A conference stage backdrop screen graphic for a tech event called "BUILD/26", ultra-wide 32:9 LED wall design, flat front-on artwork (no stage, no people, no room), for print and screen production.
+Layout: the large event logotype "BUILD/26" in the centre in bold white geometric letters, beneath it the line "Lisbon · 12-14 May 2026" in smaller letters, and at the far left and far right edges the hashtag "#build26" in small text. Background: deep midnight-blue to violet gradient with flowing luminous teal and magenta light ribbons sweeping behind the logotype, subtle fine grid lines in perspective at the bottom.
+Keep the centre third clean and high contrast so it reads from 40 metres away. Every word is spelled exactly as quoted and nothing else is written. No sponsor logos, no watermark.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "A conference stage backdrop screen graphic for a tech event called \"BUILD/26\", ultra-wide 32:9 LED wall design, flat front-on artwork (no stage, no people, no room), for print and screen production.\nLayout: the large event logotype \"BUILD/26\" in the centre in bold white geometric letters, beneath it the line \"Lisbon · 12-14 May 2026\" in smaller letters, and at the far left and far right edges the hashtag \"#build26\" in small text. Background: deep midnight-blue to violet gradient with flowing luminous teal and magenta light ribbons sweeping behind the logotype, subtle fine grid lines in perspective at the bottom.\nKeep the centre third clean and high contrast so it reads from 40 metres away. Every word is spelled exactly as quoted and nothing else is written. No sponsor logos, no watermark.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "3584x1008"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794815881,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 14112,
+    "total_tokens": 14112
+  }
+}

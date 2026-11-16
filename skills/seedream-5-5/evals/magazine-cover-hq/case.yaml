@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: magazine-cover-hq
+expected_outcome: |
+  A photoreal 3:4 magazine cover with the masthead TERRA, the cover star as described, and every cover line exactly as given, with no invented extra text and no visible anatomy errors.

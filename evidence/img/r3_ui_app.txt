@@ -1,0 +1,35 @@
+# Seedream generation record
+created: 2026-11-16T07:41:18Z
+image: ui_stride.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+A high-fidelity mobile app UI screen, flat front-on screenshot of an iPhone app (no phone frame, no hand, no perspective), for a design review. The app is "Stride", a running tracker, light mode.
+Layout from top to bottom: a status bar showing "9:41"; a header with the large bold title "Good morning, Lena" left-aligned and a round avatar on the right; one large rounded card with a soft mint-green background showing the label "This week" and the big number "18.4 km" with a thin progress ring on its right labelled "74%"; a row of three equal small cards labelled "Pace 5:12", "Runs 4" and "Streak 9 days"; a section title "Recent runs"; two list rows, each with a small route-map thumbnail on the left, the title "Morning loop" or "Harbour 10K", and the distance "6.2 km" or "10.0 km" on the right; at the bottom a tab bar with four icons labelled "Home", "Plan", "Stats", "Profile", with "Home" highlighted.
+Style: clean modern iOS design, 8-point spacing grid, generous white space, rounded corners 16 px, one accent colour (mint green #3DDC97) on near-white #F7F8FA, dark grey text #1C1C1E, a geometric sans-serif typeface, crisp vector edges, consistent icon stroke weight.
+Every word is spelled exactly as quoted and nothing else is written. No phone frame, no device mockup, no watermark, no lorem ipsum.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "A high-fidelity mobile app UI screen, flat front-on screenshot of an iPhone app (no phone frame, no hand, no perspective), for a design review. The app is \"Stride\", a running tracker, light mode.\nLayout from top to bottom: a status bar showing \"9:41\"; a header with the large bold title \"Good morning, Lena\" left-aligned and a round avatar on the right; one large rounded card with a soft mint-green background showing the label \"This week\" and the big number \"18.4 km\" with a thin progress ring on its right labelled \"74%\"; a row of three equal small cards labelled \"Pace 5:12\", \"Runs 4\" and \"Streak 9 days\"; a section title \"Recent runs\"; two list rows, each with a small route-map thumbnail on the left, the title \"Morning loop\" or \"Harbour 10K\", and the distance \"6.2 km\" or \"10.0 km\" on the right; at the bottom a tab bar with four icons labelled \"Home\", \"Plan\", \"Stats\", \"Profile\", with \"Home\" highlighted.\nStyle: clean modern iOS design, 8-point spacing grid, generous white space, rounded corners 16 px, one accent colour (mint green #3DDC97) on near-white #F7F8FA, dark grey text #1C1C1E, a geometric sans-serif typeface, crisp vector edges, consistent icon stroke weight.\nEvery word is spelled exactly as quoted and nothing else is written. No phone frame, no device mockup, no watermark, no lorem ipsum.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "1290x2796"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794814874,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 14089,
+    "total_tokens": 14089
+  }
+}

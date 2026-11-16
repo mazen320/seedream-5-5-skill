@@ -2,7 +2,7 @@ name: test
 on: [push, pull_request]
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04   # last image with Python 3.8 builds
     strategy:
       matrix:
         python: ["3.8", "3.12"]

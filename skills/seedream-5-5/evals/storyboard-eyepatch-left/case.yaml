@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: storyboard-eyepatch-left
+expected_outcome: |
+  A 16:9 storm image of the captain at the wheel where the eyepatch is over the captain's own left eye (image-right when he faces camera), or the agent verifies the side and fixes it (e.g. mirror-flip) or clearly reports the mismatch; exactly one eyepatch.

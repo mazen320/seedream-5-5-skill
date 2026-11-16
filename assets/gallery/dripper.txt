@@ -1,5 +1,5 @@
 # Seedream generation record
-created: 2026-11-16T00:36:54+04:00
+created: 2026-11-15T20:36:54Z
 image: dripper.png (1 of 1)
 model: dola-seedream-5-5-261028
 

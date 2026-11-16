@@ -1,0 +1,46 @@
+# Seedream generation record
+created: 2026-11-15T22:16:16Z
+image: edit2.png (1 of 1)
+model: dola-seedream-5-5-261028
+
+## prompt
+Image 1 is the current image. Change only one thing: Bramble now wears a small blue knitted beanie hat. Keep everything else exactly as in Image 1: Mila's face, hair, jumper and pose, Bramble's red scarf, single button eye and red stitched X exactly where they are in Image 1, the window seat, the lighting and the framing. Exclusions: no other changes, no text.
+
+## parameters
+{
+  "model": "dola-seedream-5-5-261028",
+  "size": "2560x1440",
+  "response_format": "b64_json",
+  "watermark": false
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+[
+  {
+    "source": "reading_scarf.png",
+    "sha256": "698e46e40d62fddf48f16096e50284343e04324dda347d5001ce7b3d8d80c643",
+    "bytes": 5013213,
+    "mime": "image/png"
+  },
+  {
+    "source": "bramble_sheet.png",
+    "sha256": "b7688b1dbcd5facf1d1dfd2137639fc2554d16eb4f272ee3078478b906c949dc",
+    "bytes": 5826001,
+    "mime": "image/png"
+  }
+]
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794780973,
+  "usage": {
+    "input_images": 2,
+    "generated_images": 1,
+    "output_tokens": 14400,
+    "total_tokens": 14400
+  },
+  "size": "2560x1440",
+  "output_format": "png",
+  "background": "opaque"
+}

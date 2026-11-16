@@ -15,3 +15,13 @@ assets/renders/
 !assets/gallery/*.jpg
 !assets/gallery/*.png
 _preview.html
+!evidence/img/*.jpg
+!skills/seedream-5-5/evals/*/files/*.jpg
+!evidence/img/*.png
+!skills/seedream-5-5/evals/*/files/*.png
+
+# per-asset state written by `seedream.py batch`
+.seedream/state/
+.seedream/replaced/
+.seedream/records/
+.seedream/.seedream-ledger.jsonl

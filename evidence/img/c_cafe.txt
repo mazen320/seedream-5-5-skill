@@ -1,0 +1,33 @@
+# Seedream generation record
+created: 2026-11-15T22:17:50Z
+image: c_cafe.png (1 of 1)
+model: dola-seedream-5-5-261028
+
+## prompt
+A photorealistic wide shot inside a busy corner café at golden hour. Five clearly different people: at the counter on the image-left, a tall barista with a red beard and a black apron pours latte art; at the window table, an elderly woman in a lilac cardigan reads a newspaper; beside her, a teenage boy in a yellow hoodie types on a silver laptop; at the centre table, two women in business suits, one with a grey bob and one with long braids, clink white coffee cups. On the centre table there are exactly three white cups and one croissant on a plate. A chalkboard menu on the back wall reads "FLAT WHITE 4.50" on the first line and "CROISSANT 3.20" on the second line. A ginger cat sleeps on the windowsill. Warm sunlight streams through the windows from the image-right, casting long shadows across a black-and-white checkered floor. Hanging brass pendant lamps, potted monstera by the door. Shot on a 24mm lens at eye level, everything in focus. Exclusions: no other people, no other text.
+
+## parameters
+{
+  "model": "dola-seedream-5-5-261028",
+  "size": "2560x1440",
+  "response_format": "b64_json",
+  "watermark": false
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794781065,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 14400,
+    "total_tokens": 14400
+  },
+  "size": "2560x1440",
+  "output_format": "png",
+  "background": "opaque"
+}

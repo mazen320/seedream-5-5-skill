@@ -1,0 +1,34 @@
+# Seedream generation record
+created: 2026-11-16T07:46:51Z
+image: web_pulse.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+A high-fidelity web app dashboard UI, flat front-on screenshot (no browser chrome, no perspective), dark mode, for a design review. Product: "Pulse", an analytics tool.
+Layout: a narrow left sidebar (#0F1117) with the wordmark "Pulse" at the top and a vertical menu "Overview" (highlighted), "Audience", "Revenue", "Settings", each with a small line icon; a top bar with a search field reading "Search" and a round avatar on the right; the main area (#151821) holds a row of four KPI cards labelled "Visitors 48.2K", "Conversion 3.9%", "Revenue $21.4K", "Churn 1.2%", each with a tiny sparkline; below, a large area chart card titled "Traffic, last 30 days" with a smooth teal (#2DD4BF) line and soft gradient fill; to its right a donut chart card titled "Channels" with four segments and a legend "Organic", "Paid", "Social", "Email".
+Style: modern dark SaaS UI, 8-point grid, rounded corners 12 px, thin 1 px borders #262A36, light grey text #E5E7EB, a geometric sans-serif, crisp vector edges. Every word is spelled exactly as quoted and nothing else is written. No device mockup, no watermark.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "A high-fidelity web app dashboard UI, flat front-on screenshot (no browser chrome, no perspective), dark mode, for a design review. Product: \"Pulse\", an analytics tool.\nLayout: a narrow left sidebar (#0F1117) with the wordmark \"Pulse\" at the top and a vertical menu \"Overview\" (highlighted), \"Audience\", \"Revenue\", \"Settings\", each with a small line icon; a top bar with a search field reading \"Search\" and a round avatar on the right; the main area (#151821) holds a row of four KPI cards labelled \"Visitors 48.2K\", \"Conversion 3.9%\", \"Revenue $21.4K\", \"Churn 1.2%\", each with a tiny sparkline; below, a large area chart card titled \"Traffic, last 30 days\" with a smooth teal (#2DD4BF) line and soft gradient fill; to its right a donut chart card titled \"Channels\" with four segments and a legend \"Organic\", \"Paid\", \"Social\", \"Email\".\nStyle: modern dark SaaS UI, 8-point grid, rounded corners 12 px, thin 1 px borders #262A36, light grey text #E5E7EB, a geometric sans-serif, crisp vector edges. Every word is spelled exactly as quoted and nothing else is written. No device mockup, no watermark.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "2560x1600"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794815207,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 16000,
+    "total_tokens": 16000
+  }
+}

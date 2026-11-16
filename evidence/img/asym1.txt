@@ -1,0 +1,33 @@
+# Seedream generation record
+created: 2026-11-15T22:15:42Z
+image: asym1.png (1 of 1)
+model: dola-seedream-5-5-261028
+
+## prompt
+A studio portrait of a woman in her thirties with short black hair, wearing exactly one large gold hoop earring in her image-left ear only; her image-right ear is bare. She faces the camera, plain blue backdrop, soft light. Exclusions: no second earring, no text.
+
+## parameters
+{
+  "model": "dola-seedream-5-5-261028",
+  "size": "2048x2048",
+  "response_format": "b64_json",
+  "watermark": false
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794780938,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 16384,
+    "total_tokens": 16384
+  },
+  "size": "2048x2048",
+  "output_format": "png",
+  "background": "opaque"
+}

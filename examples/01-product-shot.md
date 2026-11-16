@@ -3,8 +3,10 @@
 **Ask:** "Turn this phone photo of our coffee dripper into a premium hero shot. Leave room for
 ad copy. We also want a banner with twelve of them on a shelf."
 
-**Mode:** single reference (the phone photo is Image 1). The banner request hits a known
-failure mode, rows of identical objects, so it is planned as two renders and a composite.
+**Mode:** single reference (the phone photo is Image 1). For the banner, a simple row of twelve
+identical objects rendered correctly in our tests, so you can ask for it directly. Catalogue work
+where every item must be a pixel-identical copy of *this* product is safer as a composite, so
+that route is shown here (failure mode 3).
 
 ## Hero (`hero.txt`)
 
@@ -45,11 +47,15 @@ contact shadow, and vary the spacing by a pixel or two.
 
 <img src="../assets/gallery/dripper.jpg" width="420">
 
-The hero render, made from a text-only version of this prompt with no reference photo (sidecar: [`dripper.txt`](../assets/gallery/dripper.txt)).
+The hero render, made from a text-only version of this prompt with no reference photo. It
+missed one detail: we asked for a three-hole base, and it put four holes in the side wall. Check
+product details against the brief (sidecar: [`dripper.txt`](../assets/gallery/dripper.txt)).
 
 ## Why it works
 
-- The prompt says what to take from Image 1 **and** what to ignore. This stops the kitchen
-  background from leaking in (failure mode 7).
+- The prompt says what to take from Image 1 **and** what to ignore. This is cheap
+  insurance against the kitchen background leaking in. We never saw a leak with one reference,
+  but it costs nothing to say.
 - The negative space is part of the layout clause, so the ad copy has room.
-- The row of twelve is never asked of the model (failure mode 2).
+- The banner uses a composite because every dripper must be an exact copy of the real product
+  (failure mode 3: in complex layouts, the count holds but the sameness doesn't).

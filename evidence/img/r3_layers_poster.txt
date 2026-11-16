@@ -1,0 +1,37 @@
+# Seedream layer-decomposition record
+model: dola-seedream-5-5-261028
+provider: byteplus
+
+## prompt
+Split this poster into editable layers.
+
+## request
+{
+  "size": "2K",
+  "layer_decomposition": true,
+  "layer_decomposition_options": {
+    "max_images": 12,
+    "text_recognition": true
+  },
+  "image": "<inline image>"
+}
+
+## response (images omitted)
+seconds: 49.1
+usage: {"input_images": 1, "generated_images": 11, "output_tokens": 180180, "total_tokens": 180180}
+
+## layers (z_index, box in canvas px, name, OCR text)
+[0, null, null, null]
+[1, [0, 0, 1672, 637], "米白色粗体大标题文字“LANTERN STREET”", "LANTERN STREET"]
+[2, [327, 230, 1338, 706], "米白色副标题文字“NIGHT MARKET”", "NIGHT MARKET"]
+[3, [0, 201, 1672, 1378], "最上层横跨街道的黑色灯线，悬挂6只红橙渐变带流苏的圆形中式灯笼", null]
+[4, [110, 918, 1611, 1548], "第二层横跨街道的黑色灯线，悬挂多只红橙渐变带流苏的圆形中式灯笼", null]
+[5, [357, 1148, 1456, 1624], "第三层横跨街道的黑色灯线，悬挂多只小型红橙渐变圆形中式灯笼", null]
+[6, [541, 1304, 1258, 1780], "街道纵深方向层层排布的远景小型暖光灯笼串，向远处暖橙色光晕延伸", null]
+[7, [0, 1003, 877, 2319], "左侧沿街市集摊位组，包含蓝红拼色遮阳篷、木质操作台、摆放的容器与暖光照明", null]
+[8, [797, 1065, 1672, 2309], "右侧沿街市集摊位组，包含红白条遮阳篷、木质操作台、摆放的容器与暖光照明", null]
+[9, [0, 2057, 899, 2508], "米白色粗体日期文字“14-16 MARCH”", "14-16 MARCH"]
+[10, [0, 2155, 1221, 2508], "米白色活动信息文字“HARBOUR SQUARE · 6PM TILL LATE”", "HARBOUR SQUARE · 6PM TILL LATE"]
+
+## image
+Left: the input poster (assets/gallery/poster.jpg). Middle: the returned base plate (z 0). Right: layers 1-10 re-stacked on green.

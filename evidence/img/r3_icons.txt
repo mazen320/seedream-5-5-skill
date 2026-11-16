@@ -1,0 +1,37 @@
+# Seedream generation record
+created: 2026-11-16T07:41:27Z
+image: icons_weather.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+A set of 9 app icons for a weather app, arranged in a clean 3 by 3 grid with equal spacing, each icon centred in its own cell, for use as separate UI assets.
+Icons, row by row: sun; sun partly behind a cloud; cloud; cloud with rain drops; cloud with a lightning bolt; snowflake; wind lines; moon with two small stars; thermometer.
+Style: one consistent family: rounded filled glyphs with a 2 px darker outline, soft two-tone colouring (warm yellow for sun and moon, sky blue for rain and snow, slate grey for clouds and wind, coral for the thermometer), same visual weight and same size in every cell, flat vector look, no shadows.
+Set a transparent background. No grid lines, no labels, no text, no frames around the icons.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "A set of 9 app icons for a weather app, arranged in a clean 3 by 3 grid with equal spacing, each icon centred in its own cell, for use as separate UI assets.\nIcons, row by row: sun; sun partly behind a cloud; cloud; cloud with rain drops; cloud with a lightning bolt; snowflake; wind lines; moon with two small stars; thermometer.\nStyle: one consistent family: rounded filled glyphs with a 2 px darker outline, soft two-tone colouring (warm yellow for sun and moon, sky blue for rain and snow, slate grey for clouds and wind, coral for the thermometer), same visual weight and same size in every cell, flat vector look, no shadows.\nSet a transparent background. No grid lines, no labels, no text, no frames around the icons.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "2048x2048",
+  "background": "transparent",
+  "output_format": "png"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794814883,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 16384,
+    "total_tokens": 16384
+  }
+}

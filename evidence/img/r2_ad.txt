@@ -1,0 +1,53 @@
+# Seedream generation record
+created: 2026-11-15T22:50:16Z
+image: slow-mornings-v2.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+Image 1 is the current magazine advertisement. Change only the base of the sage-green pour-over dripper: remove the flat green saucer-shaped disc that sits between the dripper and the mug, because the real product has no flange or base plate. The dripper is a plain inverted cone that ends in a small unglazed tan foot, exactly as in Image 2, and its narrow lower end now sits directly in the open mouth of the off-white mug, its sloping walls resting on the mug's rim, with the small cluster of round drain holes (one hole with three in a row beneath it) just at the mug's rim. Image 2 is an identity reference for the dripper only: its exact cone shape, sage-green matte glaze, bare tan speckled rim band and foot; ignore Image 2's background, stone tile, coffee beans and lighting.
+
+Keep everything else exactly as in Image 1: the woman's face, silver-grey braid, linen shirt and pose, the black gooseneck kettle and the stream of water, the coffee grounds and steam, the mug, the oak counter, the sunlit kitchen, the framing, the lighting and colour grade, the headline "Slow Mornings" and the tagline "Hand-thrown in small batches" with their exact spelling, typeface, size and position.
+
+Exclusions: no saucer, no flange, no base plate, no other text, no watermark.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "Image 1 is the current magazine advertisement. Change only the base of the sage-green pour-over dripper: remove the flat green saucer-shaped disc that sits between the dripper and the mug, because the real product has no flange or base plate. The dripper is a plain inverted cone that ends in a small unglazed tan foot, exactly as in Image 2, and its narrow lower end now sits directly in the open mouth of the off-white mug, its sloping walls resting on the mug's rim, with the small cluster of round drain holes (one hole with three in a row beneath it) just at the mug's rim. Image 2 is an identity reference for the dripper only: its exact cone shape, sage-green matte glaze, bare tan speckled rim band and foot; ignore Image 2's background, stone tile, coffee beans and lighting.\n\nKeep everything else exactly as in Image 1: the woman's face, silver-grey braid, linen shirt and pose, the black gooseneck kettle and the stream of water, the coffee grounds and steam, the mug, the oak counter, the sunlit kitchen, the framing, the lighting and colour grade, the headline \"Slow Mornings\" and the tagline \"Hand-thrown in small batches\" with their exact spelling, typeface, size and position.\n\nExclusions: no saucer, no flange, no base plate, no other text, no watermark.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "1920x2400",
+  "image": [
+    "<inline image>",
+    "<inline image>"
+  ]
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+[
+  {
+    "source": "outputs/slow-mornings.png",
+    "sha256": "2b1a755a2b598283561a9f3ae2329657beface86b92129957c2e52bf28f7f92e",
+    "bytes": 5425031,
+    "mime": "image/png"
+  },
+  {
+    "source": "product.jpg",
+    "sha256": "4164f0ef05c7028982c87da778d3462626fecf684ba8107e69d229cc777c1c91",
+    "bytes": 457012,
+    "mime": "image/jpeg"
+  }
+]
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794783012,
+  "usage": {
+    "input_images": 2,
+    "generated_images": 1,
+    "output_tokens": 18000,
+    "total_tokens": 18000
+  }
+}

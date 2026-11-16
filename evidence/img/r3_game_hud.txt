@@ -1,0 +1,34 @@
+# Seedream generation record
+created: 2026-11-16T07:58:11Z
+image: game_hud.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+A game UI design mockup: the in-game HUD of a stylised fantasy action RPG, shown over a gameplay screenshot of a misty forest clearing with the player's armoured hero seen from behind in third person, for a UI design review. Landscape 16:9.
+HUD layout: top-left a circular character portrait with a red health bar labelled "HP 820/1000" and a blue mana bar labelled "MP 340/500" beside it; top-right a round minimap with a gold compass "N" marker; top-centre a quest tracker reading "Find the Lost Shrine" with "2/3 relics" beneath; bottom-centre an ability bar of six square ability slots with glowing icons and the keybinds "1", "2", "3", "4", "Q", "E" in small corners, one slot greyed on cooldown showing "4s"; bottom-right a small gold coin counter reading "1,250".
+Style: ornate but readable fantasy UI, dark slate panels with thin antique-gold trim, crisp edges, consistent icon style, legible text with subtle drop shadows. Every word is spelled exactly as quoted and nothing else is written. No watermark, no real game logos.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "A game UI design mockup: the in-game HUD of a stylised fantasy action RPG, shown over a gameplay screenshot of a misty forest clearing with the player's armoured hero seen from behind in third person, for a UI design review. Landscape 16:9.\nHUD layout: top-left a circular character portrait with a red health bar labelled \"HP 820/1000\" and a blue mana bar labelled \"MP 340/500\" beside it; top-right a round minimap with a gold compass \"N\" marker; top-centre a quest tracker reading \"Find the Lost Shrine\" with \"2/3 relics\" beneath; bottom-centre an ability bar of six square ability slots with glowing icons and the keybinds \"1\", \"2\", \"3\", \"4\", \"Q\", \"E\" in small corners, one slot greyed on cooldown showing \"4s\"; bottom-right a small gold coin counter reading \"1,250\".\nStyle: ornate but readable fantasy UI, dark slate panels with thin antique-gold trim, crisp edges, consistent icon style, legible text with subtle drop shadows. Every word is spelled exactly as quoted and nothing else is written. No watermark, no real game logos.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "2560x1440"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794815886,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 14400,
+    "total_tokens": 14400
+  }
+}

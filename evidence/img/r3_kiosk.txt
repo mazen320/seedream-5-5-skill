@@ -1,0 +1,34 @@
+# Seedream generation record
+created: 2026-11-16T07:58:05Z
+image: kiosk.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+A self-service ordering kiosk screen UI for a burger restaurant called "Stack & Co", flat front-on portrait screenshot of the touchscreen (no kiosk hardware, no hands, no perspective), for a design review. Portrait 9:16, designed to be read from 60 cm away with big touch targets.
+Layout top to bottom: a header with the wordmark "Stack & Co" and a language toggle "EN | ES"; a large title "What are you craving?"; a horizontal row of category tabs "Burgers" (selected), "Sides", "Drinks", "Desserts"; a 2-column grid of four large product cards, each with an appetising photo of the item, its name and price: "Classic Stack $9.50", "Smoky BBQ $11.00", "Veggie Crunch $10.00", "Double Trouble $13.50", each with a round "+" button; at the bottom a full-width sticky bar showing "2 items · $20.50" and a large orange button "Checkout".
+Style: bold, friendly, high contrast, warm orange #FF6B2C accent on cream #FFF8F0, dark brown text, rounded corners 24 px, minimum touch target 88 px, a chunky geometric sans-serif. Every word is spelled exactly as quoted and nothing else is written. No device frame, no watermark, no real brand logos.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "A self-service ordering kiosk screen UI for a burger restaurant called \"Stack & Co\", flat front-on portrait screenshot of the touchscreen (no kiosk hardware, no hands, no perspective), for a design review. Portrait 9:16, designed to be read from 60 cm away with big touch targets.\nLayout top to bottom: a header with the wordmark \"Stack & Co\" and a language toggle \"EN | ES\"; a large title \"What are you craving?\"; a horizontal row of category tabs \"Burgers\" (selected), \"Sides\", \"Drinks\", \"Desserts\"; a 2-column grid of four large product cards, each with an appetising photo of the item, its name and price: \"Classic Stack $9.50\", \"Smoky BBQ $11.00\", \"Veggie Crunch $10.00\", \"Double Trouble $13.50\", each with a round \"+\" button; at the bottom a full-width sticky bar showing \"2 items · $20.50\" and a large orange button \"Checkout\".\nStyle: bold, friendly, high contrast, warm orange #FF6B2C accent on cream #FFF8F0, dark brown text, rounded corners 24 px, minimum touch target 88 px, a chunky geometric sans-serif. Every word is spelled exactly as quoted and nothing else is written. No device frame, no watermark, no real brand logos.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "1440x2560"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794815881,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 14400,
+    "total_tokens": 14400
+  }
+}

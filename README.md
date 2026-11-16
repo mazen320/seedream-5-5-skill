@@ -8,140 +8,257 @@
 
 <img src="assets/gallery/logo.png" alt="" width="72">
 
-# Seedream 5.5 Skill
+# Seedream Skill
 
-**Your coding agent becomes an expert Seedream 5.5 prompter.**<br>
-It works in Claude Code, Codex, Cursor, Gemini CLI, Copilot and about 70 other agents.
+**Your coding agent makes your project's images with Seedream: on-brand, the right sizes, in the right folders.**<br>
+Works in Claude Code, Codex, Cursor, Gemini CLI, Copilot and about 70 more agents · Supports 9 API platforms · Every rule is tested and labelled
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-FFB547?style=flat-square&labelColor=17123A)](LICENSE)
 [![Agent Skills](https://img.shields.io/badge/agentskills.io-compliant-D46CF0?style=flat-square&labelColor=17123A)](https://agentskills.io/specification)
 ![Python](https://img.shields.io/badge/python-3.8%2B-7896FF?style=flat-square&labelColor=17123A)
 ![Dependencies](https://img.shields.io/badge/dependencies-0-4FB8E8?style=flat-square&labelColor=17123A)
-[![Stars](https://img.shields.io/github/stars/mazen320/seedream-5-5-skill?style=flat-square&color=FF7A6B&labelColor=17123A)](https://github.com/mazen320/seedream-5-5-skill/stargazers)
+![Platforms](https://img.shields.io/badge/API%20platforms-9-FF7A6B?style=flat-square&labelColor=17123A)
 
 ```bash
 npx skills add mazen320/seedream-5-5-skill
 ```
 
-**[Gallery](#gallery)** · **[How it prompts](#how-it-prompts)** · **[Install](#install)** · **[Failure modes](#the-failure-modes-it-catches)** · **[CLI](#use-the-script-directly)**
+**[For your project](#built-for-coding-agents)** · **[Gallery](#gallery)** · **[UI & layers](#ui-and-design-apps-websites-games-kiosks-events-layers)** · **[Tools](#finish-the-job-not-just-the-render)** · **[Prompt library](recipes/README.md)** · **[Platforms](#works-on-your-platform)** · **[Tested, not guessed](#tested-not-guessed)** · **[Use cases](#what-people-use-it-for)** · **[Install](#install)** · **[CLI](#use-the-script-directly)**
 
 </div>
 
 <br>
 
+## Built for coding agents
+
+Ask for "the images for my landing page" and get a finished kit in your repo, not one picture in a
+temp folder:
+
+| Hero, 21:9 | Link preview, exact 1200×630 | Empty state + logo (transparent) | Favicon set |
+|:-:|:-:|:-:|:-:|
+| <img src="evidence/img/r5_hero.jpg" alt="Train on a viaduct, risograph style"> | <img src="evidence/img/r5_og-image.jpg" alt="Fernway link preview card"> | <img src="evidence/img/r5_empty-trips.png" width="110" alt="Suitcase on a platform"><img src="evidence/img/r5_logo-mark.png" width="110" alt="Fern and railway mark"> | <img src="evidence/img/r5_apple-touch-icon.png" width="64" alt="apple-touch-icon"> <img src="evidence/img/r5_favicon-32.png" width="32" alt="favicon"> |
+
+One style file and one manifest, then one approval. Four images in 31 seconds for about $0.14, plus
+18 icon files and the `<head>` tags ([the full example](examples/04-project-asset-kit.md)).
+
+```bash
+python seedream.py batch .seedream/assets.json         # plan + estimated cost, spends nothing
+python seedream.py batch .seedream/assets.json --yes   # generate in parallel; re-runs skip what's unchanged
+python export.py icons public/images/logo.png --out public   # favicons, PWA, iOS, Android + <head> tags
+python seedream.py costs --out .seedream              # what this project has spent
+```
+
+- 🎨 **Style lock:** `.seedream/style.md` goes on every prompt, so a whole site, app or game looks
+  like one brand.
+- 📋 **Batch manifests:** commit `.seedream/assets.json` with your code. Each run shows the plan and
+  the cost before spending, runs in parallel, and only re-renders assets whose inputs changed,
+  under the same file names (tested live: one prompt edit, "3 up to date, 1 to generate").
+- 📐 **Exact sizes:** `--final-size 1200x630` and presets for OG, X cards, App Store, Play and Steam.
+- 🧭 **Right folders:** the skill teaches the agent where Next.js, Hugo, Xcode, Android, Unity and
+  Godot keep images, and how to wire them in.
+
+<br>
+
 ## Gallery
 
-Every image here is a first render, with no cherry-picking or retouching. Each one links to its
-**exact prompt and parameters**.
+Every image here is a first render, with no re-rolls or retouching. Click any image to see the
+**exact prompt and parameters** that made it.
 
 <table>
 <tr>
-<td width="50%" valign="top"><a href="assets/gallery/ceramicist.txt"><img src="assets/gallery/ceramicist.jpg" alt="Photoreal ceramicist at a potter's wheel"></a><br><sub><b>Photoreal.</b> Lens, light and the chalkboard text, all from one prose prompt.</sub></td>
-<td width="50%" valign="top"><a href="assets/gallery/dripper.txt"><img src="assets/gallery/dripper.jpg" alt="Sage-green ceramic coffee dripper product shot"></a><br><sub><b>Product.</b> Studio light, a travertine surface, and negative space left for copy. <i>(Cropped from 1:1.)</i></sub></td>
+<td width="50%" valign="top"><a href="assets/gallery/ceramicist.txt"><img src="assets/gallery/ceramicist.jpg" alt="Photoreal ceramicist at a potter's wheel"></a><br><sub><b>Photoreal.</b> The lens, the light and the chalkboard text all come from one prose prompt.</sub></td>
+<td width="50%" valign="top"><a href="assets/gallery/dripper.txt"><img src="assets/gallery/dripper.jpg" alt="Sage-green ceramic coffee dripper product shot"></a><br><sub><b>Product.</b> Studio light, a travertine slab, and empty space left for copy. <i>(Cropped from 1:1.)</i></sub></td>
 </tr>
 </table>
 <table>
 <tr>
-<td width="33%" valign="top"><a href="assets/gallery/poster.txt"><img src="assets/gallery/poster.jpg" alt="Lantern Street Night Market poster"></a><br><sub><b>Exact text.</b> Every string is letter-perfect on the first try.</sub></td>
-<td width="33%" valign="top"><a href="assets/gallery/bramble_sheet.txt"><img src="assets/gallery/bramble_sheet.jpg" alt="One-eyed knitted bear character sheet"></a><br><sub><b>Asymmetry held.</b> One eye, not "fixed" into two.</sub></td>
-<td width="33%" valign="top"><a href="assets/gallery/mila_sheet.txt"><img src="assets/gallery/mila_sheet.jpg" alt="Child character sheet"></a><br><sub><b>Character sheet.</b> A clean reference to reuse in later scenes.</sub></td>
+<td width="25%" valign="top"><a href="assets/gallery/poster.txt"><img src="assets/gallery/poster.jpg" alt="Lantern Street Night Market poster"></a><br><sub><b>Exact text.</b> Every word and number is exact.</sub></td>
+<td width="25%" valign="top"><a href="evidence/img/c_chinese.txt"><img src="evidence/img/c_chinese.jpg" alt="Chinese tea house poster with calligraphy"></a><br><sub><b>Chinese text.</b> Calligraphy, written from a Chinese prompt.</sub></td>
+<td width="25%" valign="top"><a href="assets/gallery/bramble_sheet.txt"><img src="assets/gallery/bramble_sheet.jpg" alt="One-eyed knitted bear character sheet"></a><br><sub><b>Character sheet.</b> One eye stays one eye.</sub></td>
+<td width="25%" valign="top"><a href="assets/gallery/transparent.txt"><img src="assets/gallery/transparent.png" alt="Transparent lemon sticker"></a><br><sub><b>Transparent PNG.</b> True RGBA from <code>--background transparent</code>.</sub></td>
+</tr>
+</table>
+<table>
+<tr>
+<td width="50%" valign="top"><a href="evidence/img/c_cafe.txt"><img src="evidence/img/c_cafe.jpg" alt="Busy cafe with five people"></a><br><sub><b>Complex scene.</b> 5 described people, exact menu text, a cat and the right light direction, from one prompt. Not perfect: it added passers-by and two extra menus despite the exclusions.</sub></td>
+<td width="50%" valign="top"><a href="evidence/img/c_infographic.txt"><img src="evidence/img/c_infographic.jpg" alt="Infographic with bar chart"></a><br><sub><b>Infographic.</b> Every number and label is exact.</sub></td>
 </tr>
 </table>
 
-### Consistent characters, then one-change edits
+### Consistent characters and one-change edits
 
-| ① Two character sheets → one scene | ② "Change only one thing: add a red scarf" |
+| Two character sheets → one scene | "Change only one thing: add a red scarf" |
 |:-:|:-:|
 | [<img src="assets/gallery/reading.jpg" alt="Child reading to a one-eyed knitted bear">](assets/gallery/reading.txt) | [<img src="assets/gallery/reading_scarf.jpg" alt="Same scene, bear now wears a red scarf">](assets/gallery/reading_scarf.txt) |
-| Both identities stay separate, and the bear's single eye and knee patch survive. | Face, pose, room, light and framing are unchanged. Only the scarf is new. |
+| Both identities stay separate. | Face, pose, room and light are unchanged. Two more rounds held too ([evidence](evidence/README.md)). |
 
-The full walkthrough is in [examples/03](examples/03-consistent-character.md).
+### Hard tasks: precision edits and print-grade layouts
+
+| Original | "Swap the croissant for cake, rewrite the chalkboard, remove the cat. Change nothing else." |
+|:-:|:-:|
+| [<img src="evidence/img/r2_cafe_original.jpg" alt="Original café photo">](evidence/img/r2_cafe_original.jpg) | [<img src="evidence/img/r2_cafe_edit.jpg" alt="Edited café: cake, new chalkboard, no cat">](evidence/img/r2_cafe_edit.txt) |
+| | All three changes exact in one render. `export.py merge` then kept the other 93% of pixels identical to the original. |
+
+<table>
+<tr>
+<td width="33%" valign="top"><a href="evidence/img/r2_cover.txt"><img src="evidence/img/r2_cover.jpg" alt="TERRA magazine cover"></a><br><sub><b>Magazine cover.</b> Masthead, a pull quote and 3 cover lines, all exact.</sub></td>
+<td width="33%" valign="top"><a href="evidence/img/r2_ad.txt"><img src="evidence/img/r2_ad.jpg" alt="Product ad from two reference photos"></a><br><sub><b>Ad from 2 references.</b> The product from one photo, the woman from another, plus exact copy.</sub></td>
+<td width="33%" valign="top"><a href="evidence/img/r2_chain3.txt"><img src="evidence/img/r2_chain3.jpg" alt="Edit chain step 3"></a><br><sub><b>3-step edit chain.</b> Snow, then a beanie, then cocoa. The characters held through all 3 steps.</sub></td>
+</tr>
+</table>
+
+### UI and design: apps, websites, games, kiosks, events, layers
+
+<table>
+<tr>
+<td width="22%" valign="top"><a href="evidence/img/r3_ui_app.txt"><img src="evidence/img/r3_ui_app.jpg" alt="Running app home screen"></a><br><sub><b>App screen.</b> 20 labels, all exact.</sub></td>
+<td width="22%" valign="top"><a href="evidence/img/r3_ui_dark.txt"><img src="evidence/img/r3_ui_dark.jpg" alt="Dark mode of the same screen"></a><br><sub><b>Dark mode</b> from the light screen. Nothing moved.</sub></td>
+<td width="56%" valign="top"><a href="evidence/img/r3_web_landing.txt"><img src="evidence/img/r3_web_landing.jpg" alt="SaaS landing page"></a><br><sub><b>Landing page.</b> Every quoted word exact, but "placeholder logos" came back as <b>real brands</b>. The skill now warns about this and words around it.</sub><br><br><a href="evidence/img/r3_ui_mockup.txt"><img src="evidence/img/r3_ui_mockup.jpg" alt="The app shown on a phone in a photo"></a><br><sub><b>Marketing mockup</b> made from the screenshot.</sub></td>
+</tr>
+</table>
+
+<table>
+<tr>
+<td width="50%" valign="top"><a href="evidence/img/r3_game_hud.txt"><img src="evidence/img/r3_game_hud.jpg" alt="Fantasy RPG HUD over gameplay"></a><br><sub><b>Game HUD.</b> HP/MP bars, quest tracker, minimap, 6 ability slots with keybinds and a cooldown. Every label exact.</sub></td>
+<td width="18%" valign="top"><a href="evidence/img/r3_kiosk.txt"><img src="evidence/img/r3_kiosk.jpg" alt="Burger kiosk ordering screen"></a><br><sub><b>Kiosk.</b> Prices, tabs and checkout, all exact.</sub></td>
+<td width="18%" valign="top"><a href="evidence/img/r3_event_badge.txt"><img src="evidence/img/r3_event_badge.jpg" alt="Conference speaker badge"></a><br><sub><b>Event badge</b> with a QR placeholder.</sub></td>
+</tr>
+<tr><td colspan="3"><a href="evidence/img/r3_event_stage.txt"><img src="evidence/img/r3_event_stage.jpg" alt="32:9 conference stage LED wall"></a><br><sub><b>32:9 stage LED wall</b> at 3584×1008, made in one render.</sub></td></tr>
+</table>
+
+| One flat poster → editable layers (`--layers 12 --ocr`) | One render → 9 icon files (`export.py split`) |
+|:-:|:-:|
+| <img src="evidence/img/r3_layers_poster.jpg" alt="Original poster, clean base plate, foreground layers on green"> | <img src="evidence/img/r3_icons.png" width="260" alt="Weather icon sheet"><br><img src="evidence/img/r3_icons_split.jpg" alt="Nine separate icon files"> |
+| Original · clean base plate · the 10 layers above the base plate, on green. Text layers come back with exact OCR, a font guess and a colour. `export.py layers` writes an SVG with one image per layer, for design tools such as Figma. | One consistent style, one billed image, nine trimmed transparent PNGs. |
+
+<br>
+
+## Finish the job, not just the render
+
+| | |
+|---|---|
+| 🎲 **Options** | `--count 4` renders 4 versions in parallel and writes an HTML contact sheet to pick from |
+| 🧼 **Clean edits** | Seedream redraws the whole frame on every edit. `export.py merge original edited` keeps only the regions that really changed, so everything else stays pixel-perfect |
+| 📐 **Platform export** | `export.py --to instagram-post --to story` crops or pads to 12 presets: Instagram, Stories/Reels, YouTube, X, LinkedIn, Pinterest, A4/A5 print. It warns when the crop would cut a lot |
+| 🧅 **Layers** | `--layers N --ocr` splits a flat image into named, positioned layers. You get an interactive layer viewer, `layers.json` (boxes, text, font guesses), an SVG for Figma or Illustrator (with `--live-text`, text layers become editable text), and aligned PNGs for Photoshop or After Effects |
+| ✂️ **Split** | `export.py split sheet.png` cuts a transparent sheet of icons, stickers or sprites into one trimmed PNG per item, named and in reading order |
+| 🪞 **Mirror fix** | `export.py --flip` corrects a one-sided detail that landed on the wrong side |
+| 📋 **Batch + style lock** | `seedream.py batch` turns a manifest into a consistent set. It estimates the cost first and skips unchanged assets |
+| 🏷️ **Icons** | `export.py icons` turns one logo into favicons, PWA, iOS `AppIcon.appiconset` and Android mipmaps, plus the HTML tags |
+| 💸 **Cost ledger** | Every paid call is logged next to the images; `seedream.py costs` sums it up |
+| 📚 **Prompt library** | [31 copy-paste prompts](recipes/README.md), each shown with the exact image it produced |
+
+<br>
+
+## Works on your platform
+
+Seedream is sold through many APIs, each with its own field names, size formats and async
+flow. The skill's script hides those differences: you pick `--provider`, and it handles the
+rest.
+
+| Platform | `--provider` | Key variable | Seedream |
+|---|---|---|---|
+| **BytePlus ModelArk** | `byteplus` (default) | `ARK_API_KEY` | **5.5** ✅ live-tested |
+| **Volcengine Ark** (China) | `volcengine` | `ARK_API_KEY` | **5.5** |
+| **Runware** | `runware` | `RUNWARE_API_KEY` | **5.5** |
+| **WaveSpeedAI** | `wavespeed` | `WAVESPEED_API_KEY` | **5.5** |
+| **Kie.ai** | `kie` | `KIE_API_KEY` | **5.5** |
+| **Evolink** | `evolink` | `EVOLINK_API_KEY` | **5.5** |
+| **fal** | `fal` | `FAL_KEY` | **5.5** (incl. layers) |
+| **Replicate** | `replicate` | `REPLICATE_API_TOKEN` | 5.0 Pro |
+| **OpenRouter** | `openrouter` | `OPENROUTER_API_KEY` | **5.5** |
+
+BytePlus is tested against the live API. The other eight follow their published docs and are
+covered by offline mock tests of each platform's full flow, including async polling. If you use
+one of them, please [open an issue](../../issues) with how it went.
+
+The prompting guidance in the skill works on any platform, including ones the script doesn't
+support. Endpoints, fields and prices are in
+[`providers.md`](skills/seedream-5-5/references/providers.md).
+
+<br>
+
+## Tested, not guessed
+
+Most prompt guides repeat folklore. We ran 44 test renders, 2 layer splits, 2 size-limit checks and
+four rounds of with-skill vs without-skill tests on Seedream 5.5 to check our own rules. **Several common beliefs turned out to be wrong, and the skill was corrected to match.**
+
+| Common belief | What happened when we tested it |
+|---|---|
+| "Name the side and a one-sided detail lands there" | ⚠️ Only 3 times in 6 (eyepatch, earring, antenna, button eye). Layout positions like "on the image-left" held every time. The skill now says: state it both ways, check it, and mirror-flip if it's wrong |
+| "More than 2 people causes identity bleed" | ❌ 3 people from 3 reference images, and 5 people in a café, all stayed distinct |
+| "Rows of identical objects drift" | ⚠️ A row of 12 was perfect. In a busy 3×3 grid the **count** held but the **sameness** didn't |
+| "Avoid negatives like *no people*" | ❌ Negatives were obeyed. In busy scenes, though, excluded things leak in at the edges |
+| "Keep prompts short" | ❌ A 230-word prompt followed nearly every detail; a 60-word one made things up |
+| "Edits drift after a few rounds" | ✅ Not in our test: 3 rounds, and the face stayed the same |
+| "Ask for placeholder logos" | ⚠️ We got real Airbnb, Slack and Stripe logos on a mockup. Ask for plain grey shapes instead |
+| "Draft at 1K, it's faster" | ⚠️ Only 3 s faster (24 s vs 27 s over 3 runs each). It is cheaper, though ($0.020 vs $0.035) |
+| "Layer decomposition gives clean cut-outs" | ⚠️ Mostly. Re-stacking matched the original, but some edges are hard-clipped and glows carry haze. The skill shows how to check and clean them |
+| Size limits | ✅ Confirmed by the API: 921,600 to **4,624,220** px |
+
+We also ran Anthropic's [skill-creator](https://github.com/anthropics/skills) eval loop: 13 real
+tasks, each run by an agent **with** the skill and an agent **without** it, both on Seedream 5.5,
+graded on the same checklist.
+
+| Latest run of each of the 13 tasks | With skill | Without skill |
+|---|---|---|
+| Checks passed | **83 / 83** | 81 / 83 |
+| Invented text (a fake seal, a fake barcode) | **none** | 2 |
+| Platform facts correct (e.g. which version fal hosts) | ✅ | ✅ |
+| Native transparent icons, first try | ✅ | ❌ It didn't know 5.5 can output transparency, so it keyed out a magenta background and needed a second render |
+
+Tasks: a transparent sticker, a Chinese poster, a storyboard, a precision edit, an edit chain, a
+2-reference ad, a magazine cover, a website hero, dark mode plus a Figma hand-off, game icons, one
+image in 3 social sizes, a fal request (dry run), and a translated poster.
+
+**What testing caught.** On its first run of the newer tasks the skill had one fact out of date
+(fal had just added Seedream 5.5) and picked an expensive method for the Figma hand-off (20 billed
+layer images where rebuilding the screen as an SVG costs none). Both were fixed and re-tested.
+Every round, with the numbers before and after the fixes, is in the [evidence log](evidence/README.md).
+
+A strong agent with no skill already gets most single images right. The skill adds what an agent
+can't improvise: current platform facts, the failure modes we measured, and the project-asset
+pipeline (style lock, batches, exact sizes, icon sets, cost control).
+
+Every rule in the skill is labelled **Tested**, **Official** or **Reported**. All images and
+prompts are in the [evidence log](evidence/README.md). Each test is a single render, so treat
+the results as spot checks, not benchmarks.
+
+<br>
+
+## What people use it for
+
+The skill includes playbooks for the 12 jobs people use Seedream for most, based on public
+reviews and our own tests:
+
+| | | |
+|---|---|---|
+| 👗 Realistic people and fashion | 🛍️ E-commerce and ads | 🪧 Posters and Chinese text |
+| 📊 Infographics and slides | 🧸 Consistent characters and storyboards | ✏️ Editing by instruction and region edits |
+| 🎬 Keyframes for Seedance and Kling | 🧩 Transparent assets, icon sets and layers | 📱 UI: apps, websites, dashboards, game HUDs, kiosks |
+| 🌍 Localising a design into other languages | ⚡ Speed, cost and live apps | 🎤 Events: stage screens, badges, signage |
+
+The playbooks also cover version choice: 5.5 for edits and transparency, 4.5 or 5.0 Lite when
+you need 4K or an image set in one call. They also cover rewording prompts that the safety
+filter rejects by mistake, and avoiding unwanted square outputs. See
+[`use-cases.md`](skills/seedream-5-5/references/use-cases.md) and, for screens,
+[`ui-ux.md`](skills/seedream-5-5/references/ui-ux.md).
 
 <br>
 
 ## How it prompts
 
 You describe what you want in plain words. The agent turns that into a structured prose prompt.
-For example, the ceramicist above came from this prompt:
+This is the prompt behind the ceramicist image above:
 
 <img src="assets/prompt-anatomy.svg" alt="Anatomy of a Seedream prompt: deliverable, subject, layout, materials, lighting, camera, style, exact text, exclusions" width="100%">
 
-Then it:
-
-1. **Picks a mode:** new image, edit, multi-reference composite, or another round of edits.
-2. **Gives every reference image a role**, such as *"Image 1 provides the face; ignore its
-   background."*
-3. **Runs a pre-flight check** against known failure modes before spending a render.
-4. **Renders and saves** the image next to a `.txt` file holding the exact prompt, the
-   parameters and a hash of each reference.
-5. **Reviews the result against your brief** and fixes one thing per round, restating what
-   must stay the same.
-
-<br>
-
-## Why this skill
-
-<table>
-<tr>
-<td width="33%" valign="top">
-
-**🎯 Reference roles**<br>
-It says what to take from each image and what to ignore, so backgrounds and props stop
-leaking.
-
-</td>
-<td width="33%" valign="top">
-
-**🔁 Edits without drift**<br>
-Each round makes one change and repeats the full list of what to keep. The original image is
-re-attached as an identity reference.
-
-</td>
-<td width="33%" valign="top">
-
-**🧾 Reproducible**<br>
-Every render gets a sidecar record. Re-run any image, or audit a whole edit chain.
-
-</td>
-</tr>
-<tr>
-<td valign="top">
-
-**🛡️ Safe with your key**<br>
-The key is read only from `ARK_API_KEY`. It is never printed, logged, saved or passed as a
-flag, and it is removed from error text. Sidecars never store absolute paths.
-
-</td>
-<td valign="top">
-
-**🧠 Light on context**<br>
-`SKILL.md` is about 120 lines. Templates, API details and failure modes load only when the
-agent needs them.
-
-</td>
-<td valign="top">
-
-**📦 Nothing to install**<br>
-One Python file, standard library only. Offline tests run in CI against a mock API.
-
-</td>
-</tr>
-</table>
-
-<br>
-
-## The failure modes it catches
-
-| | Problem | What goes wrong | What the skill does |
-|:-:|---|---|---|
-| 👁️ | **Asymmetric details** | A one-eyed toy grows a second eye | Names the side **from the viewer's point of view** and what replaces the missing eye, then repeats it in the exclusions |
-| ↔️ | **"Its left" vs "image-left"** | Seedream mixes up whose left you mean, as our own test above showed | Says *image-left* / *image-right*, or *"exactly where it is in Image 1"* |
-| 🍾 | **Rows of identical objects** | The count drifts and the shapes vary | Renders one object, then the copies are composited |
-| 👥 | **More than 2 people** | Faces and outfits blend together | Keeps two people per frame, each with a reference and a screen position |
-| 🔤 | **Text that will be animated** | Letters melt once a video model animates the frame | Keeps text out of the frame and adds it in post |
-| 🌀 | **Long edit chains** | The subject's identity slowly drifts | Makes one change per round and re-attaches the original |
-
-All of them, with symptoms and fixes, are in [`failure-modes.md`](skills/seedream-5-5/references/failure-modes.md).
+The agent then:
+1. Picks a **mode**: generate, edit, multi-reference, region edit with `<bbox>`, or transparent.
+2. Gives every reference image a **role**.
+3. Runs **pre-flight checks** against the known failure modes.
+4. **Renders the image** and saves a sidecar `.txt` file with the exact prompt and parameters.
+5. **Reviews the result against your brief** and fixes one thing per round.
 
 <br>
 
@@ -157,14 +274,16 @@ All of them, with symptoms and fixes, are in [`failure-modes.md`](skills/seedrea
 <tr><td><b>Copilot</b></td><td>Copy it to <code>~/.copilot/skills/</code> or <code>.github/skills/</code></td></tr>
 </table>
 
-Then set your own BytePlus ModelArk key, with Seedream 5.5 enabled, in the shell your agent runs in:
+Next, set the key for your platform in the shell your agent runs in. For example:
 
 ```bash
 export ARK_API_KEY=...            # PowerShell: $env:ARK_API_KEY = '...'
 ```
 
 > [!IMPORTANT]
-> Never paste your key into the chat. The skill tells the agent never to ask for it.
+> Never paste a key into the chat. The skill tells the agent never to ask for one. The script
+> reads keys only from environment variables, never sends them to image CDNs, and never writes
+> them to disk.
 
 <br>
 
@@ -177,19 +296,30 @@ export ARK_API_KEY=...            # PowerShell: $env:ARK_API_KEY = '...'
 
 ```bash
 S=skills/seedream-5-5/scripts/seedream.py
-python $S models                                        # Seedream model IDs for your key
+python $S providers                                     # platforms and key variables
+python $S models                                        # Seedream model IDs (byteplus/volcengine)
 python $S generate --prompt "..." --size 16:9 --out out --name hero
-python $S generate --prompt-file p.txt --image a.png --image b.jpg --size 2:3
+python $S generate --provider fal --prompt-file p.txt --image a.png --image b.jpg --size 2:3
+python $S generate --prompt "..." --size 1:1 --background transparent
 python $S generate --prompt "..." --dry-run              # print the request; no key, no cost
+python $S generate --image screen.png --layers 15 --ocr --prompt "Split into UI layers. Name every layer in English."
 ```
 
 | Flag | Meaning |
 |---|---|
-| `--size` | `16:9` · `9:16` · `2:3` · `3:2` · `1:1`, or any `WxH` with an area of at least 921,600 px (the banner above is `3024x1296`) |
-| `--image` | A path, URL or data URI. Repeat the flag for more images; they become Image 1, Image 2 and so on |
-| `--model` | Default `dola-seedream-5-5-261028`, or set `SEEDREAM_MODEL` |
-| `--name` | File stem. `_2`, `_3` and so on are added instead of overwriting |
-| `--extra` | A JSON object of extra request fields, passed through as-is |
+| `--provider` | One of the 9 platforms above (or set `SEEDREAM_PROVIDER`) |
+| `--size` | Ratio: `1:1` `4:3` `3:4` `16:9` `9:16` `3:2` `2:3` `21:9`; tier: `1K` `1.5K` `2K`; or `WxH` from 921,600 to 4,624,220 px |
+| `--image` | A path, URL or data URI. Repeat for up to 10; they become Image 1, Image 2 and so on |
+| `--background` | `transparent` gives an RGBA PNG on 5.5 |
+| `--model` | Overrides the platform's default Seedream model |
+| `--extra` | A JSON object merged into the request, for platform-specific fields such as image sets |
+| `--name` | File stem. `_2`, `_3` and so on are added rather than overwriting |
+| `--count` | Render N options in parallel (max 8) and write an HTML contact sheet |
+| `--style FILE` | Append a project style file to the prompt, for a consistent look |
+| `--final-size WxH` / `--fit` | Also save an exact-size copy (crop or pad), e.g. `1200x630` |
+| `batch MANIFEST` | Generate a whole asset list; `--yes` to spend, `--only`, `--force`, `--jobs` |
+| `costs --out DIR` | Sum the cost ledger for a folder |
+| `--layers N` / `--ocr` | Split the one `--image` into up to N layers (5.5, BytePlus or Volcengine), with text, font and colour for text layers. Every layer is billed |
 
 </details>
 
@@ -200,15 +330,21 @@ python $S generate --prompt "..." --dry-run              # print the request; no
 
 ```
 skills/seedream-5-5/
-├── SKILL.md                 core rules, mode picker, prompt structure, pre-flight checks
-├── scripts/seedream.py      models · generate · --dry-run
+├── SKILL.md                  core rules, platform picker, modes, prompt structure, pre-flight
+├── scripts/seedream.py       9 providers · generate (--count, --layers, --style, --final-size) · batch · costs · --dry-run
+├── scripts/export.py         merge · layers · split · icons · 20 size presets · pad/crop · --flip (needs Pillow)
+├── evals/                    skill-creator test cases (with vs without skill)
 └── references/
-    ├── api.md               endpoint, fields, sizes, errors
-    ├── prompting.md         9 templates
-    └── failure-modes.md     failure modes, each with a fix
-examples/                    3 worked examples with real results
-assets/gallery/              every image on this page, each with its sidecar
-tests/                       offline tests against a mock API
+    ├── prompting.md          14 templates (tested ones marked)
+    ├── failure-modes.md      21 failure modes, each labelled Tested / Official / Reported
+    ├── use-cases.md          12 playbooks and a model picker
+    ├── ui-ux.md              apps, websites, dashboards, games, kiosks, dark mode, mockups, icons, Figma hand-off
+    ├── project-assets.md     style lock, batch manifests, exact sizes, icon sets, where each framework keeps images
+    └── providers.md          versions, IDs, fields, prices, error codes
+recipes/                      31 copy-paste prompts, each with the image it produced
+evidence/                     every test render with its prompt, and what it proved
+examples/                     4 worked examples with real results (incl. a full website asset kit)
+tests/                        offline mock tests of all 9 providers
 ```
 
 </details>
@@ -217,9 +353,12 @@ tests/                       offline tests against a mock API
 
 ## Contributing
 
-Found a new way Seedream breaks, or a better fix? Open an issue or PR. Include the prompt, the
-sidecar `.txt` and what went wrong. A failure mode that comes with a tested fix is the most
-valuable contribution.
+The most valuable contributions are:
+- a **live report from a platform** other than BytePlus;
+- a **re-run of a test** in the [evidence log](evidence/README.md) that came out differently;
+- a **new failure mode, with a tested fix**.
+
+Please include the prompt and the sidecar `.txt`.
 
 ```bash
 python -m unittest discover -s tests -v
@@ -233,7 +372,7 @@ python -m unittest discover -s tests -v
 
 If this skill saved you a render, **[give it a ⭐](https://github.com/mazen320/seedream-5-5-skill)**.
 
-<sub>MIT licensed. Not affiliated with ByteDance or BytePlus. Model IDs, limits and pricing change, so check <code>seedream.py models</code>.<br>
+<sub>MIT licensed. Not affiliated with ByteDance, BytePlus or any of the platforms listed. Model IDs, limits and prices change.<br>
 Part of the prompt structure is adapted from the Seedream 5.5 guide in <a href="https://github.com/Evolink-AI/awesome-seedream-5-5-guide-and-prompt">Evolink-AI/awesome-seedream-5-5-guide-and-prompt</a> (CC BY 4.0).</sub>
 
 </div>

@@ -5,8 +5,8 @@
     {
       "name": "seedream-5-5",
       "source": "./",
-      "description": "Prompt and call ByteDance Seedream 5.5 on BytePlus ModelArk.",
-      "version": "1.0.0",
+      "description": "Prompt, generate, edit and layer ByteDance Seedream images (5.5, 5.0, 4.5) on 9 API platforms: ads, posters, UI mockups, icon sets, localisation and Figma-ready layers.",
+      "version": "2.1.0",
       "license": "MIT",
       "skills": ["./skills/seedream-5-5"]
     }

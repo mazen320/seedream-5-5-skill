@@ -1,0 +1,34 @@
+# Seedream generation record
+created: 2026-11-16T07:58:02Z
+image: badge.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+A conference attendee badge design for "BUILD/26", flat front-on print artwork of the badge only (no lanyard photo, no hand, no perspective), portrait 2:3, for print production.
+Layout: top band with the logotype "BUILD/26" in white on a deep midnight-blue to violet gradient with a teal light ribbon; a large white area with the attendee name "Amara Okafor" in big bold dark letters, below it "Staff Engineer" and "Northwind Labs" in smaller grey; a teal pill-shaped tag reading "SPEAKER"; at the bottom a square QR-code placeholder drawn as a plain grey square with rounded corners, and the line "Lisbon · 12-14 May 2026".
+Style: clean modern event branding, generous margins, geometric sans-serif. Every word is spelled exactly as quoted and nothing else is written. No real QR code pattern, no barcode, no sponsor logos, no watermark.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "A conference attendee badge design for \"BUILD/26\", flat front-on print artwork of the badge only (no lanyard photo, no hand, no perspective), portrait 2:3, for print production.\nLayout: top band with the logotype \"BUILD/26\" in white on a deep midnight-blue to violet gradient with a teal light ribbon; a large white area with the attendee name \"Amara Okafor\" in big bold dark letters, below it \"Staff Engineer\" and \"Northwind Labs\" in smaller grey; a teal pill-shaped tag reading \"SPEAKER\"; at the bottom a square QR-code placeholder drawn as a plain grey square with rounded corners, and the line \"Lisbon · 12-14 May 2026\".\nStyle: clean modern event branding, generous margins, geometric sans-serif. Every word is spelled exactly as quoted and nothing else is written. No real QR code pattern, no barcode, no sponsor logos, no watermark.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "1728x2592"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794815878,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 17496,
+    "total_tokens": 17496
+  }
+}

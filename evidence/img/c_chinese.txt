@@ -1,0 +1,33 @@
+# Seedream generation record
+created: 2026-11-15T22:17:54Z
+image: c_chinese.png (1 of 1)
+model: dola-seedream-5-5-261028
+
+## prompt
+一张竖版中式茶馆海报。顶部是大号书法标题"云间茶舍"，下方小字"每日 10:00 - 22:00"。画面中央是一只青瓷茶杯，热气袅袅，背景是淡墨山水。底部写着"新茶上市"。整体为淡雅的米色与青绿色调，宣纸质感。除引号中的文字外不要出现其他文字。
+
+## parameters
+{
+  "model": "dola-seedream-5-5-261028",
+  "size": "1728x2592",
+  "response_format": "b64_json",
+  "watermark": false
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794781071,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 17496,
+    "total_tokens": 17496
+  },
+  "size": "1728x2592",
+  "output_format": "png",
+  "background": "opaque"
+}

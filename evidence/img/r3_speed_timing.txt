@@ -1,0 +1,8 @@
+# Wall-clock time per render, same prompt (r3_speed_1k.txt), BytePlus, Seedream 5.5, run one after another
+# includes upload, generation and download; measured 2026-11-16
+1K 27.9 s
+2K 29.9 s
+1K 21.2 s
+2K 19.2 s
+1K 22.6 s
+2K 31.2 s

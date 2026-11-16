@@ -1,0 +1,59 @@
+# Seedream generation record
+created: 2026-11-15T22:49:18Z
+image: slow-mornings.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+A photorealistic magazine print advertisement, portrait 4:5, for a small ceramics studio's hand-made pour-over coffee dripper. Image 1 provides the product: the dripper's exact shape, proportions, glaze colour and finish. Keep it exactly as in Image 1: a plain, wide inverted cone with straight sloping walls and no handle and no flange, a soft sage-green matte glaze speckled faintly, a thin band of bare tan speckled stoneware around the rim lip, an unglazed tan foot, and a small cluster of round drain holes near the base (one hole with three in a row beneath it). Ignore Image 1's background, stone tile, coffee beans and lighting. Image 2 provides only the woman: keep her face, age, silver-grey hair worn in a long loose braid, and her relaxed oatmeal linen shirt with rolled sleeves exactly as in Image 2. Ignore Image 2's pottery studio, clay, apron, potter's wheel and dim lighting.
+
+The scene: the woman stands at a pale oak kitchen counter in a bright, sunlit kitchen on a calm morning, slowly pouring hot water from a matte black gooseneck kettle held in her hand. The thin stream of water falls into the sage-green dripper, which sits nested in the mouth of a plain off-white stoneware mug on the counter, with dark wet coffee grounds blooming inside the dripper and a wisp of steam rising. Her expression is calm and focused, eyes on the pour.
+
+Layout: the dripper and mug sit in the lower-middle foreground, sharp and clearly readable, the dripper large enough to fill about a sixth of the frame. The woman is in the middle ground at waist-up, slightly image-right, her arm and the kettle spout reaching over the dripper. The top fifth of the frame is calm, uncluttered warm-white wall with soft sunlight, kept empty for the headline. A narrow clear band of counter at the very bottom is kept empty for the tagline.
+
+Materials: matte glazed ceramic with fine speckles, raw stoneware, soft linen, oiled oak, a few green leaves of a potted herb on the windowsill. Lighting: warm low morning sunlight streaming through a window on the image-left, raking across the counter, soft golden highlights on the dripper's glaze and the steam, gentle natural fill, airy and bright. Camera: 50mm lens at f/2.8, eye level slightly above the counter, the dripper in crisp focus, the woman in gentle focus, background softly blurred. Style: natural editorial lifestyle photography, real skin texture, light warm grade with soft creams and sage greens.
+
+Exact text: at the top, centred in the empty wall area, the headline "Slow Mornings" in a large elegant serif typeface, deep charcoal colour, the biggest element of text. At the bottom, centred in the clear band, a small tagline "Hand-thrown in small batches" in a light sans-serif, charcoal, about one quarter the height of the headline. Every word is spelled exactly as quoted and nothing else is written.
+
+Exclusions: no other text, no logos, no watermark, no other people, no paper filter, no second dripper.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "A photorealistic magazine print advertisement, portrait 4:5, for a small ceramics studio's hand-made pour-over coffee dripper. Image 1 provides the product: the dripper's exact shape, proportions, glaze colour and finish. Keep it exactly as in Image 1: a plain, wide inverted cone with straight sloping walls and no handle and no flange, a soft sage-green matte glaze speckled faintly, a thin band of bare tan speckled stoneware around the rim lip, an unglazed tan foot, and a small cluster of round drain holes near the base (one hole with three in a row beneath it). Ignore Image 1's background, stone tile, coffee beans and lighting. Image 2 provides only the woman: keep her face, age, silver-grey hair worn in a long loose braid, and her relaxed oatmeal linen shirt with rolled sleeves exactly as in Image 2. Ignore Image 2's pottery studio, clay, apron, potter's wheel and dim lighting.\n\nThe scene: the woman stands at a pale oak kitchen counter in a bright, sunlit kitchen on a calm morning, slowly pouring hot water from a matte black gooseneck kettle held in her hand. The thin stream of water falls into the sage-green dripper, which sits nested in the mouth of a plain off-white stoneware mug on the counter, with dark wet coffee grounds blooming inside the dripper and a wisp of steam rising. Her expression is calm and focused, eyes on the pour.\n\nLayout: the dripper and mug sit in the lower-middle foreground, sharp and clearly readable, the dripper large enough to fill about a sixth of the frame. The woman is in the middle ground at waist-up, slightly image-right, her arm and the kettle spout reaching over the dripper. The top fifth of the frame is calm, uncluttered warm-white wall with soft sunlight, kept empty for the headline. A narrow clear band of counter at the very bottom is kept empty for the tagline.\n\nMaterials: matte glazed ceramic with fine speckles, raw stoneware, soft linen, oiled oak, a few green leaves of a potted herb on the windowsill. Lighting: warm low morning sunlight streaming through a window on the image-left, raking across the counter, soft golden highlights on the dripper's glaze and the steam, gentle natural fill, airy and bright. Camera: 50mm lens at f/2.8, eye level slightly above the counter, the dripper in crisp focus, the woman in gentle focus, background softly blurred. Style: natural editorial lifestyle photography, real skin texture, light warm grade with soft creams and sage greens.\n\nExact text: at the top, centred in the empty wall area, the headline \"Slow Mornings\" in a large elegant serif typeface, deep charcoal colour, the biggest element of text. At the bottom, centred in the clear band, a small tagline \"Hand-thrown in small batches\" in a light sans-serif, charcoal, about one quarter the height of the headline. Every word is spelled exactly as quoted and nothing else is written.\n\nExclusions: no other text, no logos, no watermark, no other people, no paper filter, no second dripper.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "1920x2400",
+  "image": [
+    "<inline image>",
+    "<inline image>"
+  ]
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+[
+  {
+    "source": "product.jpg",
+    "sha256": "4164f0ef05c7028982c87da778d3462626fecf684ba8107e69d229cc777c1c91",
+    "bytes": 457012,
+    "mime": "image/jpeg"
+  },
+  {
+    "source": "model.jpg",
+    "sha256": "7ee8f0c8c0ef6b78ac6a8f4fcf537228ce82b3bcd2abb126ef8ccd242a0d1417",
+    "bytes": 686765,
+    "mime": "image/jpeg"
+  }
+]
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794782955,
+  "usage": {
+    "input_images": 2,
+    "generated_images": 1,
+    "output_tokens": 18000,
+    "total_tokens": 18000
+  }
+}

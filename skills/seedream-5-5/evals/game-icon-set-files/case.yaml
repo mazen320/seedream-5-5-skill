@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: game-icon-set-files
+expected_outcome: |
+  Six separate transparent PNG files named after the items, one clean icon per file, in one consistent style, with the number of billed renders reported.

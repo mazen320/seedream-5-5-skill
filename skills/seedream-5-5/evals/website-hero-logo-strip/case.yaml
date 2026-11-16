@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: website-hero-logo-strip
+expected_outcome: |
+  A landscape desktop website hero with the Tidewell wordmark, the exact headline and button, a bottle, and a 'Trusted by' strip of five neutral placeholders that contain no real company logos or names.

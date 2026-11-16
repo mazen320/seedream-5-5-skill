@@ -1,0 +1,33 @@
+# Seedream generation record
+created: 2026-11-15T22:17:48Z
+image: c_long.png (1 of 1)
+model: dola-seedream-5-5-261028
+
+## prompt
+An editorial magazine photograph, vertical, of a young chef in her late twenties standing in a narrow professional kitchen during evening service. She has a short platinum pixie cut, a small tattoo of a lemon on her inner left forearm, rolled white chef's jacket sleeves, a navy striped apron and a white towel tucked into the apron string. She is plating a dish with tweezers: a single seared scallop on a pool of bright green pea purée, three pea shoots and two edible violet flowers, on a matte black ceramic plate. Behind her, slightly out of focus, copper pans hang from a steel rail, a sous chef in a black cap stirs a large pot releasing visible steam, and order tickets are clipped to a steel rail above the pass. The light is mixed: cool fluorescent from above and a warm orange glow from the flames of a gas burner on the image-left. Her expression is focused, lips slightly pressed, eyes on the plate. Shot on an 85mm lens at f/2, shallow depth of field, the plate and her hands tack-sharp. Rich colour, slight film grain, high contrast. Exclusions: no readable text on tickets, no logos, no third person.
+
+## parameters
+{
+  "model": "dola-seedream-5-5-261028",
+  "size": "1728x2592",
+  "response_format": "b64_json",
+  "watermark": false
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794781064,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 17496,
+    "total_tokens": 17496
+  },
+  "size": "1728x2592",
+  "output_format": "png",
+  "background": "opaque"
+}

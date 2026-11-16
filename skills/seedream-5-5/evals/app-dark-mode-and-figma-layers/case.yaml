@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: app-dark-mode-and-figma-layers
+expected_outcome: |
+  A dark-mode image of the same screen with every element, position and label unchanged, plus a layered deliverable that imports into Figma with the screen's elements as separately positioned layers.
+context:
+  scaffold_script: place-files.sh

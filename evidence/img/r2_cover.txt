@@ -1,0 +1,40 @@
+# Seedream generation record
+created: 2026-11-15T22:50:57Z
+image: terra_cover_v3.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+Image 1 is the current magazine cover. Change only the quotation marks of the italic serif pull quote at <bbox>35 405 380 520</bbox>. Delete the closing quotation mark after the word "run" on the first line, and add a matching closing curly quotation mark directly after the word "remember" at the end of the second line, so the pull quote reads as one quotation across two lines: “I run / to remember”. Keep the opening quotation mark before "I", and keep the words, the italic serif typeface, the cream colour, the size, the line break and the position exactly as in Image 1. Keep the woman's face, laugh, hand, skin texture, rust jacket, the background hills, the lighting, the colour grade, the framing, the masthead "TERRA", the kicker "THE ALTITUDE ISSUE" with its thin rule, "42 KM OF SILENCE" and "ISSUE 12 / AUTUMN 2026" exactly as in Image 1. Nothing else is written. No watermark.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "Image 1 is the current magazine cover. Change only the quotation marks of the italic serif pull quote at <bbox>35 405 380 520</bbox>. Delete the closing quotation mark after the word \"run\" on the first line, and add a matching closing curly quotation mark directly after the word \"remember\" at the end of the second line, so the pull quote reads as one quotation across two lines: “I run / to remember”. Keep the opening quotation mark before \"I\", and keep the words, the italic serif typeface, the cream colour, the size, the line break and the position exactly as in Image 1. Keep the woman's face, laugh, hand, skin texture, rust jacket, the background hills, the lighting, the colour grade, the framing, the masthead \"TERRA\", the kicker \"THE ALTITUDE ISSUE\" with its thin rule, \"42 KM OF SILENCE\" and \"ISSUE 12 / AUTUMN 2026\" exactly as in Image 1. Nothing else is written. No watermark.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "1860x2480",
+  "image": "<inline image>"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+[
+  {
+    "source": "outputs/terra_cover_v2.png",
+    "sha256": "879e99a9d59a532c8a79be08b397726cb40ad8c1d5efbb832c37bb549b744756",
+    "bytes": 5900516,
+    "mime": "image/png"
+  }
+]
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794783053,
+  "usage": {
+    "input_images": 1,
+    "generated_images": 1,
+    "output_tokens": 18018,
+    "total_tokens": 18018
+  }
+}

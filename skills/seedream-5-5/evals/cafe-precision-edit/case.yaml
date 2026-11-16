@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: cafe-precision-edit
+expected_outcome: |
+  An edited café photo, same size, where the croissant is now a slice of chocolate cake, the main chalkboard reads exactly the two requested lines, the cat is gone, and the people, furniture, lighting and framing are unchanged.
+context:
+  scaffold_script: place-files.sh

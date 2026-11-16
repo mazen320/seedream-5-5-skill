@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: chinese-tea-poster
+expected_outcome: |
+  A 2:3 portrait image where all three Chinese strings appear exactly as given, with no other text; a calm misty-mountain design with a clay teapot.

@@ -1,0 +1,52 @@
+# Seedream generation record
+created: 2026-11-15T22:49:47Z
+image: step3.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+A still from a children's animated film pitch. Image 1 is the current image. Change only one thing: add one mug of hot chocolate standing on the window seat cushion next to the girl, in the gap between the girl's knee and the teddy bear, near the centre of the image. The mug is a small cream ceramic mug with a handle, filled with dark hot chocolate topped with a few white and pink mini marshmallows, with a faint wisp of steam rising. It is sized naturally for a child's mug next to the girl, sits upright on the cushion, and catches the warm lamp light.
+Keep everything else exactly as in Image 1. The girl stays the same character: same face, freckles, curly red hair, mustard-yellow knitted jumper with a checked collar, dark trousers, cream socks, the same cross-legged pose and the same open picture book in her hands. The knitted mustard-yellow teddy bear stays the same character: it has exactly one black button eye, on the image-left side of its face, and a red stitched X on the image-right side of its face where the other eye was (the bear's own left eye); keep its brown stitched nose, smile, the blue patch on its leg on the image-right, and its sitting pose against the cushion. Keep the window frame, plaid curtains, glowing table lamp, cushions, window seat, room interior, camera angle, framing and composition unchanged.
+Keep the tiny green knitted beanie with the pom-pom on the bear's head exactly as in Image 1. Keep the snowy winter evening outside the window exactly as in Image 1: falling snow, snow-covered rooftops and trees, deep blue dusk sky and the lit windows of the house opposite. Image 2 is the identity reference only for the girl and the bear; ignore its daytime window view and its bare-headed bear.
+Exclusions: no other changes, exactly one mug, no second eye on the bear, no text, no extra people.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "A still from a children's animated film pitch. Image 1 is the current image. Change only one thing: add one mug of hot chocolate standing on the window seat cushion next to the girl, in the gap between the girl's knee and the teddy bear, near the centre of the image. The mug is a small cream ceramic mug with a handle, filled with dark hot chocolate topped with a few white and pink mini marshmallows, with a faint wisp of steam rising. It is sized naturally for a child's mug next to the girl, sits upright on the cushion, and catches the warm lamp light.\nKeep everything else exactly as in Image 1. The girl stays the same character: same face, freckles, curly red hair, mustard-yellow knitted jumper with a checked collar, dark trousers, cream socks, the same cross-legged pose and the same open picture book in her hands. The knitted mustard-yellow teddy bear stays the same character: it has exactly one black button eye, on the image-left side of its face, and a red stitched X on the image-right side of its face where the other eye was (the bear's own left eye); keep its brown stitched nose, smile, the blue patch on its leg on the image-right, and its sitting pose against the cushion. Keep the window frame, plaid curtains, glowing table lamp, cushions, window seat, room interior, camera angle, framing and composition unchanged.\nKeep the tiny green knitted beanie with the pom-pom on the bear's head exactly as in Image 1. Keep the snowy winter evening outside the window exactly as in Image 1: falling snow, snow-covered rooftops and trees, deep blue dusk sky and the lit windows of the house opposite. Image 2 is the identity reference only for the girl and the bear; ignore its daytime window view and its bare-headed bear.\nExclusions: no other changes, exactly one mug, no second eye on the bear, no text, no extra people.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "2560x1440",
+  "image": [
+    "<inline image>",
+    "<inline image>"
+  ]
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+[
+  {
+    "source": "../outputs/step2.png",
+    "sha256": "afb95b4383dd4316047969709cd482a8a939426ab73e3e3c57e9e3239c452490",
+    "bytes": 4963942,
+    "mime": "image/png"
+  },
+  {
+    "source": "reading.jpg",
+    "sha256": "2250560fcd621bd09c83ba24f96b990f686853a0005aba85fdf403e879376aca",
+    "bytes": 648285,
+    "mime": "image/jpeg"
+  }
+]
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794782983,
+  "usage": {
+    "input_images": 2,
+    "generated_images": 1,
+    "output_tokens": 14400,
+    "total_tokens": 14400
+  }
+}

@@ -1,0 +1,33 @@
+# Seedream generation record
+created: 2026-11-15T22:17:48Z
+image: c_grid.png (1 of 1)
+model: dola-seedream-5-5-261028
+
+## prompt
+A studio photograph of a wooden market stall display: exactly nine identical small red cast-iron teapots arranged in a perfect three-by-three grid on the middle shelf, each with the same black lid and curved spout pointing to the image-right. On the top shelf, a row of five different green succulents in terracotta pots. On the bottom shelf, a woven basket of lemons. Soft daylight from above, straight-on view. Exclusions: no text, no people.
+
+## parameters
+{
+  "model": "dola-seedream-5-5-261028",
+  "size": "2048x2048",
+  "response_format": "b64_json",
+  "watermark": false
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794781064,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 16384,
+    "total_tokens": 16384
+  },
+  "size": "2048x2048",
+  "output_format": "png",
+  "background": "opaque"
+}

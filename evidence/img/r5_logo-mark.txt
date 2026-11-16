@@ -1,0 +1,36 @@
+# Seedream generation record
+created: 2026-11-16T08:29:21Z
+image: logo-mark.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+App icon mark for 'Fernway': a fern leaf curling into the shape of a railway track, centred, bold and simple, readable at 32 px. No text. Set a transparent background.
+
+House style for this project: Warm editorial illustration: soft risograph grain, a limited palette of terracotta #D9734E, sage #9DB39A, cream #F4EDE1 and ink #23201C, simple rounded shapes, gentle hand-drawn outlines, generous negative space, no gradients, no photorealism.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "App icon mark for 'Fernway': a fern leaf curling into the shape of a railway track, centred, bold and simple, readable at 32 px. No text. Set a transparent background.\n\nHouse style for this project: Warm editorial illustration: soft risograph grain, a limited palette of terracotta #D9734E, sage #9DB39A, cream #F4EDE1 and ink #23201C, simple rounded shapes, gentle hand-drawn outlines, generous negative space, no gradients, no photorealism.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "2048x2048",
+  "background": "transparent",
+  "output_format": "png"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794817757,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 16384,
+    "total_tokens": 16384
+  }
+}

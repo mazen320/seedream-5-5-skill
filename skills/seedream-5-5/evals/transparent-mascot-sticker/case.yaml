@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: transparent-mascot-sticker
+expected_outcome: |
+  A square PNG with a real alpha channel (transparent background) showing the coffee bean mascot with legs, smile and red bow tie; the prompt and parameters are recorded; the API key is never printed or written.

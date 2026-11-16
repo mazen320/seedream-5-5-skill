@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: edit-chain-winter
+expected_outcome: |
+  Three saved images, one per step, each built on the previous; the final image shows snow outside, the bear in a green beanie and a hot chocolate mug with marshmallows, with the girl's identity and the one-eyed bear preserved in every step.
+context:
+  scaffold_script: place-files.sh

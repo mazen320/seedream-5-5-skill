@@ -1,0 +1,40 @@
+# Seedream generation record
+created: 2026-11-16T07:46:35Z
+image: ui_stride_dark.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+Image 1 is a light-mode mobile app screen. Create the dark-mode version of the same screen: keep every element, its position, size, text, icon and the mint-green accent #3DDC97 exactly as in Image 1, and change only the colours: background #0E0F12, cards #1A1C21, primary text #F2F2F7, secondary text #8E8E93, the weekly card becomes a deep green-tinted #12271F. Keep the avatar photo and the map thumbnails as they are. Every word stays spelled exactly as in Image 1 and nothing else is written.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "Image 1 is a light-mode mobile app screen. Create the dark-mode version of the same screen: keep every element, its position, size, text, icon and the mint-green accent #3DDC97 exactly as in Image 1, and change only the colours: background #0E0F12, cards #1A1C21, primary text #F2F2F7, secondary text #8E8E93, the weekly card becomes a deep green-tinted #12271F. Keep the avatar photo and the map thumbnails as they are. Every word stays spelled exactly as in Image 1 and nothing else is written.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "1290x2796",
+  "image": "<inline image>"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+[
+  {
+    "source": "r3_ui_app.jpg (full-size original)",
+    "sha256": "b3783eda76e32a5eec14aa06c6de51e7cb27be78aca5f480843c5dd89d978617",
+    "bytes": 2559822,
+    "mime": "image/png"
+  }
+]
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794815191,
+  "usage": {
+    "input_images": 1,
+    "generated_images": 1,
+    "output_tokens": 14089,
+    "total_tokens": 14089
+  }
+}

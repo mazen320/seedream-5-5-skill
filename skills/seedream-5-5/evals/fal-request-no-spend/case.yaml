@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: fal-request-no-spend
+expected_outcome: |
+  An exact fal request (endpoint, headers, body) for fal's Seedream 5.5 edit endpoint (bytedance/seedream/v5.5/edit), with a portrait 9:16 size in fal's format, both references, a ready-to-run command, and an accurate statement of which version fal offers, without making a paid call.
+context:
+  scaffold_script: place-files.sh

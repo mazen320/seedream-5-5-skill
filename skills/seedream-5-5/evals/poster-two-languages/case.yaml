@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: poster-two-languages
+expected_outcome: |
+  Two posters the same size as poster.jpg, with all four text lines correctly translated into Spanish and German respectively, rendered cleanly in the same style, and the artwork outside the text pixel-for-pixel or near-identical to the original.
+context:
+  scaffold_script: place-files.sh

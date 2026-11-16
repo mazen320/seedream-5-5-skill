@@ -1,0 +1,40 @@
+# Seedream generation record
+created: 2026-11-16T07:46:36Z
+image: ui_mockup.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+Image 1 is our app screen. A marketing hero image: a modern smartphone with thin black bezels standing upright at a slight three-quarter angle on a pale stone surface, its screen showing exactly the app screen from Image 1, undistorted, with every word legible. Soft morning window light from the image-left, a sprig of eucalyptus in a small glass beside it, gentle shadow, warm neutral background with empty space on the right third for a headline. Product photography, 85mm lens, shallow depth of field on the background only; the phone screen stays sharp. No text other than what is on the screen, no logos on the phone.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "Image 1 is our app screen. A marketing hero image: a modern smartphone with thin black bezels standing upright at a slight three-quarter angle on a pale stone surface, its screen showing exactly the app screen from Image 1, undistorted, with every word legible. Soft morning window light from the image-left, a sprig of eucalyptus in a small glass beside it, gentle shadow, warm neutral background with empty space on the right third for a headline. Product photography, 85mm lens, shallow depth of field on the background only; the phone screen stays sharp. No text other than what is on the screen, no logos on the phone.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "2560x1440",
+  "image": "<inline image>"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+[
+  {
+    "source": "r3_ui_app.jpg (full-size original)",
+    "sha256": "b3783eda76e32a5eec14aa06c6de51e7cb27be78aca5f480843c5dd89d978617",
+    "bytes": 2559822,
+    "mime": "image/png"
+  }
+]
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794815192,
+  "usage": {
+    "input_images": 1,
+    "generated_images": 1,
+    "output_tokens": 14400,
+    "total_tokens": 14400
+  }
+}

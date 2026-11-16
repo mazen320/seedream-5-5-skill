@@ -1,0 +1,52 @@
+# Seedream generation record
+created: 2026-11-15T22:48:56Z
+image: step2.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+A still from a children's animated film pitch. Image 1 is the current image. Change only one thing: add a tiny green knitted beanie hat on the knitted teddy bear's head, sitting between its two ears with both ears still showing, made of chunky green wool in the same knitted texture as the bear, with a small folded brim and a little green pom-pom on top. The beanie sits above the bear's eyes and does not cover the button eye or the red stitched X.
+Keep everything else exactly as in Image 1. The girl stays the same character: same face, freckles, curly red hair, mustard-yellow knitted jumper with a checked collar, dark trousers, cream socks, the same cross-legged pose and the same open picture book in her hands. The knitted mustard-yellow teddy bear stays the same character: it has exactly one black button eye, on the image-left side of its face, and a red stitched X on the image-right side of its face where the other eye was (the bear's own left eye); keep its brown stitched nose, smile, the blue patch on its leg on the image-right, and its sitting pose against the cushion. Keep the window frame, plaid curtains, glowing table lamp, cushions, window seat, room interior, camera angle, framing and composition unchanged.
+Keep the snowy winter evening outside the window exactly as in Image 1: falling snow, snow-covered rooftops and trees, deep blue dusk sky and the lit windows of the house opposite. Image 2 is the identity reference only for the girl and the bear; ignore its daytime window view.
+Exclusions: no other changes, no second eye on the bear, no hat on the girl, no text, no extra people.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "A still from a children's animated film pitch. Image 1 is the current image. Change only one thing: add a tiny green knitted beanie hat on the knitted teddy bear's head, sitting between its two ears with both ears still showing, made of chunky green wool in the same knitted texture as the bear, with a small folded brim and a little green pom-pom on top. The beanie sits above the bear's eyes and does not cover the button eye or the red stitched X.\nKeep everything else exactly as in Image 1. The girl stays the same character: same face, freckles, curly red hair, mustard-yellow knitted jumper with a checked collar, dark trousers, cream socks, the same cross-legged pose and the same open picture book in her hands. The knitted mustard-yellow teddy bear stays the same character: it has exactly one black button eye, on the image-left side of its face, and a red stitched X on the image-right side of its face where the other eye was (the bear's own left eye); keep its brown stitched nose, smile, the blue patch on its leg on the image-right, and its sitting pose against the cushion. Keep the window frame, plaid curtains, glowing table lamp, cushions, window seat, room interior, camera angle, framing and composition unchanged.\nKeep the snowy winter evening outside the window exactly as in Image 1: falling snow, snow-covered rooftops and trees, deep blue dusk sky and the lit windows of the house opposite. Image 2 is the identity reference only for the girl and the bear; ignore its daytime window view.\nExclusions: no other changes, no second eye on the bear, no hat on the girl, no text, no extra people.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "2560x1440",
+  "image": [
+    "<inline image>",
+    "<inline image>"
+  ]
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+[
+  {
+    "source": "../outputs/step1.png",
+    "sha256": "8f92577ff585d9a578ac3b613994bfd93c2c61169377644633ff18c36855c696",
+    "bytes": 4958520,
+    "mime": "image/png"
+  },
+  {
+    "source": "reading.jpg",
+    "sha256": "2250560fcd621bd09c83ba24f96b990f686853a0005aba85fdf403e879376aca",
+    "bytes": 648285,
+    "mime": "image/jpeg"
+  }
+]
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794782933,
+  "usage": {
+    "input_images": 2,
+    "generated_images": 1,
+    "output_tokens": 14400,
+    "total_tokens": 14400
+  }
+}

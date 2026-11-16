@@ -29,12 +29,13 @@ python skills/seedream-5-5/scripts/seedream.py generate --prompt-file poster.txt
 
 <img src="../assets/gallery/poster.jpg" width="420">
 
-The actual render. Every string came out letter-perfect on the first try (sidecar: [`poster.txt`](../assets/gallery/poster.txt)).
+The actual render. Every word and number came out exactly as quoted on the first try. The one difference: the
+"·" separator rendered as a slightly larger "•" (sidecar: [`poster.txt`](../assets/gallery/poster.txt)).
 
 ## Why it works
 
 - Each piece of text has a quoted string, a position, a style and a rank in the hierarchy
-  (failure mode 6).
+  (failure mode 5).
 - The lines are short, and the long line is split into two lines on purpose.
 - "nothing else is written" together with "no extra text" stops the model inventing filler
   words.

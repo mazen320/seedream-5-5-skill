@@ -1,0 +1,33 @@
+# Seedream generation record
+created: 2026-11-15T22:15:45Z
+image: rows.png (1 of 1)
+model: dola-seedream-5-5-261028
+
+## prompt
+A studio product photograph of exactly twelve identical amber glass apothecary bottles with black caps, standing in one straight evenly spaced row on a white oak shelf, seen straight on at eye level against a warm grey wall. Every bottle is the same height, shape and label position. Soft even light from above. Exclusions: no text, no other objects.
+
+## parameters
+{
+  "model": "dola-seedream-5-5-261028",
+  "size": "2560x1440",
+  "response_format": "b64_json",
+  "watermark": false
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794780941,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 14400,
+    "total_tokens": 14400
+  },
+  "size": "2560x1440",
+  "output_format": "png",
+  "background": "opaque"
+}
