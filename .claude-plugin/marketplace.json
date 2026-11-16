@@ -1,0 +1,14 @@
+{
+  "name": "seedream-5-5-skill",
+  "owner": { "name": "seedream-5-5-skill contributors" },
+  "plugins": [
+    {
+      "name": "seedream-5-5",
+      "source": "./",
+      "description": "Prompt and call ByteDance Seedream 5.5 on BytePlus ModelArk.",
+      "version": "1.0.0",
+      "license": "MIT",
+      "skills": ["./skills/seedream-5-5"]
+    }
+  ]
+}

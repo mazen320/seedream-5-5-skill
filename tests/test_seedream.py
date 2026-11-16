@@ -11,7 +11,8 @@ import threading
 import unittest
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
+SKILL_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "skills", "seedream-5-5")
+sys.path.insert(0, os.path.join(SKILL_DIR, "scripts"))
 import seedream  # noqa: E402
 
 FAKE_KEY = "test-key-0123456789abcdef"
@@ -166,6 +167,35 @@ class SeedreamTests(unittest.TestCase):
                                     "--extra", '{"prompt": "y"}')
         self.assertEqual(code, 1)
         self.assertIn("own flag", err)
+
+
+class SpecTests(unittest.TestCase):
+    """SKILL.md must satisfy the agentskills.io frontmatter rules."""
+
+    def test_frontmatter(self):
+        import re
+        with open(os.path.join(SKILL_DIR, "SKILL.md"), encoding="utf-8") as f:
+            text = f.read()
+        m = re.match(r"---\r?\n(.*?)\r?\n---\r?\n", text, re.S)
+        self.assertTrue(m, "missing frontmatter")
+        fm = m.group(1)
+        top = dict(re.findall(r"^([a-z-]+):\s*(.*)$", fm, re.M))
+        allowed = {"name", "description", "license", "compatibility", "metadata", "allowed-tools"}
+        self.assertLessEqual(set(top), allowed, "non-spec keys: {}".format(set(top) - allowed))
+        name = top["name"]
+        self.assertRegex(name, r"^[a-z0-9]+(-[a-z0-9]+)*$")
+        self.assertLessEqual(len(name), 64)
+        self.assertEqual(name, os.path.basename(os.path.normpath(SKILL_DIR)))
+        self.assertTrue(0 < len(top["description"]) <= 1024, len(top["description"]))
+        self.assertLessEqual(len(top["compatibility"]), 500)
+        self.assertLess(text.count("\n"), 500,"SKILL.md should stay under 500 lines")
+
+    def test_reference_links_exist(self):
+        import re
+        with open(os.path.join(SKILL_DIR, "SKILL.md"), encoding="utf-8") as f:
+            text = f.read()
+        for link in re.findall(r"\]\((references/[^)]+)\)", text):
+            self.assertTrue(os.path.isfile(os.path.join(SKILL_DIR, link)), link)
 
 
 if __name__ == "__main__":
