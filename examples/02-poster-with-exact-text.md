@@ -25,6 +25,12 @@ Exclusions: no extra text, no logos, no watermark, no people in the foreground.
 python skills/seedream-5-5/scripts/seedream.py generate --prompt-file poster.txt --size 2:3 --out out --name night_market_poster
 ```
 
+## Result
+
+<img src="../assets/gallery/poster.jpg" width="420">
+
+The actual render. Every string came out letter-perfect on the first try (sidecar: [`poster.txt`](../assets/gallery/poster.txt)).
+
 ## Why it works
 
 - Each piece of text has a quoted string, a position, a style and a rank in the hierarchy

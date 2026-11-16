@@ -137,7 +137,8 @@ def load_image(ref):
     mime = mimetypes.guess_type(ref)[0] or sniff_mime(raw) or "image/png"
     uri = "data:{};base64,{}".format(mime, base64.b64encode(raw).decode("ascii"))
     return uri, {
-        "source": os.path.abspath(ref),
+        # Recorded as given, not absolute, so sidecars don't leak usernames or home paths.
+        "source": ref.replace("\\", "/"),
         "sha256": hashlib.sha256(raw).hexdigest(),
         "bytes": len(raw),
         "mime": mime,

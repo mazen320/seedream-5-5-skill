@@ -1,0 +1,2 @@
+A minimal app icon on a square canvas: a single glowing seed at the centre, amber and gold at its core fading to coral at its edge, surrounded by three thin concentric rings of warm light like ripples on water, each fainter than the last. The background is a smooth deep indigo to plum gradient. Flat, clean vector-like rendering with a soft inner glow, perfectly centred and symmetrical, generous padding around the mark, crisp edges.
+Exclusions: no text, no letters, no frame, no border, no watermark, no shadow outside the mark.

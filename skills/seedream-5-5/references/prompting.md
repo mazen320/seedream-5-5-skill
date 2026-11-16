@@ -42,7 +42,7 @@ and give its position, line breaks, alignment and hierarchy. Short lines render 
 ## Character sheet (for consistency across images)
 
 > A full-body character reference of [name]: [age, build, face, hair, distinguishing marks,
-> including any asymmetry and which side it is on], wearing [the outfit, layer by layer, with
+> including any asymmetry and which side of the image it is on], wearing [the outfit, layer by layer, with
 > colours and materials]. Neutral standing pose, arms slightly away from the body, facing the
 > camera, the whole figure in frame with space around it. Plain light-grey seamless backdrop,
 > soft even light, sharp focus throughout. Exclusions: no props, no other people, no text.

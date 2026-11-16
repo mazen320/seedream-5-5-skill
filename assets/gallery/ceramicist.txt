@@ -1,0 +1,34 @@
+# Seedream generation record
+created: 2026-11-16T00:36:58+04:00
+image: ceramicist.png (1 of 1)
+model: dola-seedream-5-5-261028
+
+## prompt
+A photorealistic medium shot of a ceramicist in her sixties with a silver braid and a clay-streaked apron, seated at a potter's wheel on the left third of the frame, shelves of bisque pots behind her. Wet terracotta clay rising under her hands, a worn oak bench, linen sleeves rolled to the elbow. Soft north-window light from the right, cool 5600K, gentle falloff into shadow. Shot on a 50mm lens at f/2.8, background softly blurred. Muted earthy palette, fine film grain, calm documentary mood. A small chalkboard on the shelf reads "OPEN STUDIO".
+Exclusions: no extra people, no logos, no watermark, no other text.
+
+## parameters
+{
+  "model": "dola-seedream-5-5-261028",
+  "size": "2592x1728",
+  "response_format": "b64_json",
+  "watermark": false
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794775015,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 17496,
+    "total_tokens": 17496
+  },
+  "size": "2592x1728",
+  "output_format": "png",
+  "background": "opaque"
+}

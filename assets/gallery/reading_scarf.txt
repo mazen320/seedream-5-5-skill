@@ -1,0 +1,51 @@
+# Seedream generation record
+created: 2026-11-16T00:38:15+04:00
+image: reading_scarf.png (1 of 1)
+model: dola-seedream-5-5-261028
+
+## prompt
+Image 1 is the current image. Change only one thing: Bramble now wears a tiny red knitted scarf
+wrapped once around the neck, its ends hanging over the chest. Keep everything else exactly as in
+Image 1: Mila's face, hair, jumper and pose, Bramble's single button eye and red stitched X exactly where
+they are in Image 1, the window seat, the lighting and the framing. Image 2 is Bramble's
+identity reference only.
+Exclusions: no other changes, no second eye on the bear, no text.
+
+## parameters
+{
+  "model": "dola-seedream-5-5-261028",
+  "size": "2560x1440",
+  "response_format": "b64_json",
+  "watermark": false
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+[
+  {
+    "source": "reading.png",
+    "sha256": "92dab1c14d4d395ed097d480983e9adaa32861e7c3f47cc2395a20cfe86baa4a",
+    "bytes": 5145240,
+    "mime": "image/png"
+  },
+  {
+    "source": "bramble_sheet.png",
+    "sha256": "b7688b1dbcd5facf1d1dfd2137639fc2554d16eb4f272ee3078478b906c949dc",
+    "bytes": 5826001,
+    "mime": "image/png"
+  }
+]
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794775091,
+  "usage": {
+    "input_images": 2,
+    "generated_images": 1,
+    "output_tokens": 14400,
+    "total_tokens": 14400
+  },
+  "size": "2560x1440",
+  "output_format": "png",
+  "background": "opaque"
+}

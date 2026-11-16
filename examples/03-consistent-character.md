@@ -48,8 +48,8 @@ python skills/seedream-5-5/scripts/seedream.py generate --prompt-file reading.tx
 ```text
 Image 1 is the current image. Change only one thing: Bramble now wears a tiny red knitted scarf
 wrapped once around the neck, its ends hanging over the chest. Keep everything else exactly as in
-Image 1: Mila's face, hair, jumper and pose, Bramble's single button eye on the left and red
-stitched X on the right, the window seat, the lighting and the framing. Image 2 is Bramble's
+Image 1: Mila's face, hair, jumper and pose, Bramble's single button eye and red stitched X exactly where
+they are in Image 1, the window seat, the lighting and the framing. Image 2 is Bramble's
 identity reference only.
 Exclusions: no other changes, no second eye on the bear, no text.
 ```
@@ -57,6 +57,21 @@ Exclusions: no other changes, no second eye on the bear, no text.
 ```bash
 python skills/seedream-5-5/scripts/seedream.py generate --prompt-file scarf.txt --image out/reading.png --image out/bramble_sheet.png --size 16:9 --out out --name reading_scarf
 ```
+
+## What actually happened
+
+| Character sheet | Scene (two references) | Edit: + scarf |
+|:-:|:-:|:-:|
+| <img src="../assets/gallery/bramble_sheet.jpg" width="220"> | <img src="../assets/gallery/reading.jpg" width="330"> | <img src="../assets/gallery/reading_scarf.jpg" width="330"> |
+
+- The one-eye asymmetry held in all three images, and the scene kept both identities apart.
+- The edit changed only the scarf. Face, pose, room, light and framing stayed the same.
+- **One miss, and it taught us something.** The sheet put the button on the *viewer's* left even
+  though the prompt said "the toy's left", while the knee patch landed on the toy's own left. So
+  the edit prompt stopped naming a side and said "exactly where they are in Image 1". The skill
+  now tells agents to name sides from the viewer's point of view.
+
+The exact prompts and parameters are in the sidecars in [`assets/gallery/`](../assets/gallery/).
 
 ## Why it works
 

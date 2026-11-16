@@ -1,0 +1,53 @@
+# Seedream generation record
+created: 2026-11-16T00:37:40+04:00
+image: reading.png (1 of 1)
+model: dola-seedream-5-5-261028
+
+## prompt
+A warm photorealistic image. Image 1 provides Bramble the knitted bear: keep the single button
+eye on the toy's left, the red stitched X on the right, the mustard wool and the blue knee patch
+exactly. Image 2 provides Mila, the child: keep her face, curly auburn hair and yellow jumper
+exactly. Mila sits on the left of frame on a window seat, reading a picture book aloud; Bramble
+sits on the right of frame propped against a cushion, facing her. Soft grey daylight from the
+window behind them, warm lamp glow from the right. Medium shot at eye level on a 40mm lens,
+gentle depth of field.
+Exclusions: no other people, no readable text on the book, no second eye on the bear.
+
+## parameters
+{
+  "model": "dola-seedream-5-5-261028",
+  "size": "2560x1440",
+  "response_format": "b64_json",
+  "watermark": false
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+[
+  {
+    "source": "bramble_sheet.png",
+    "sha256": "b7688b1dbcd5facf1d1dfd2137639fc2554d16eb4f272ee3078478b906c949dc",
+    "bytes": 5826001,
+    "mime": "image/png"
+  },
+  {
+    "source": "mila_sheet.png",
+    "sha256": "1c37531c800afc762c1f1e1e65cc13e246633e855a0daa773a686fcbe1041b36",
+    "bytes": 5502119,
+    "mime": "image/png"
+  }
+]
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794775057,
+  "usage": {
+    "input_images": 2,
+    "generated_images": 1,
+    "output_tokens": 14400,
+    "total_tokens": 14400
+  },
+  "size": "2560x1440",
+  "output_format": "png",
+  "background": "opaque"
+}

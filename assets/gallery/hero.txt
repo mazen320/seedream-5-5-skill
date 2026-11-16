@@ -1,0 +1,34 @@
+# Seedream generation record
+created: 2026-11-16T00:37:07+04:00
+image: hero.png (1 of 1)
+model: dola-seedream-5-5-261028
+
+## prompt
+A wide cinematic key art image for a software project. In the right half of the frame, a single luminous seed, the size of an almond, floats above an open palm, glowing warm amber and gold at its core. From the seed, a soft spiral of light unfurls upward and outward into a drifting cloud of small dreamlike vignettes, each like a tiny floating photograph: a sage-green ceramic coffee dripper on travertine, a rainy street strung with red paper lanterns, a hand-knitted mustard-yellow toy bear, a misty mountain lake at dawn. The left half is deep indigo night sky fading to plum, with faint stars and generous empty space. In the upper left, the title "SEEDREAM 5.5" in large clean geometric sans-serif capitals, warm white, and directly below it in smaller, widely spaced amber capitals "AGENT SKILL". Soft volumetric glow from the seed lights the palm from below; everything else stays dark and calm. Painterly but crisp, rich contrast, fine grain. Every word is spelled exactly as quoted and nothing else is written.
+Exclusions: no other text, no logos, no watermark, no faces.
+
+## parameters
+{
+  "model": "dola-seedream-5-5-261028",
+  "size": "3024x1296",
+  "response_format": "b64_json",
+  "watermark": false
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794775024,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 15309,
+    "total_tokens": 15309
+  },
+  "size": "3024x1296",
+  "output_format": "png",
+  "background": "opaque"
+}

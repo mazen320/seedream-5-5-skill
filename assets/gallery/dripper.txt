@@ -1,0 +1,34 @@
+# Seedream generation record
+created: 2026-11-16T00:36:54+04:00
+image: dripper.png (1 of 1)
+model: dola-seedream-5-5-261028
+
+## prompt
+A studio product photograph of a ceramic pour-over coffee dripper with a matte sage-green glaze, an unglazed raw rim and a small three-hole base. It stands on a pale travertine slab, viewed from slightly above at about 20 degrees, filling half the frame on the right, with the left half left as clean negative space. Warm beige seamless backdrop. Soft key light from a large softbox at upper right, gentle fill from the left, a thin rim light separating the rim from the backdrop; a soft natural shadow falls to the lower left. A few roasted coffee beans rest loosely near the base, softly out of focus.
+Exclusions: no text, no logos, no second dripper.
+
+## parameters
+{
+  "model": "dola-seedream-5-5-261028",
+  "size": "2048x2048",
+  "response_format": "b64_json",
+  "watermark": false
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794775011,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 16384,
+    "total_tokens": 16384
+  },
+  "size": "2048x2048",
+  "output_format": "png",
+  "background": "opaque"
+}

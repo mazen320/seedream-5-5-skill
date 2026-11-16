@@ -1,0 +1,40 @@
+# Seedream generation record
+created: 2026-11-16T00:36:56+04:00
+image: bramble_sheet.png (1 of 1)
+model: dola-seedream-5-5-261028
+
+## prompt
+A full-body character reference of Bramble, a hand-knitted toy bear about 30 cm tall in chunky
+mustard-yellow wool with visible stitches, short rounded ears and a slightly lopsided smile in
+brown thread. Bramble has exactly one eye: a single shiny black button on the toy's left side of
+the face; on the right side, where the second eye would be, there is a small stitched X in red
+thread. A faded blue patch is sewn onto the left knee. Neutral standing pose, arms slightly away
+from the body, facing the camera, whole figure visible with space around it. Plain light-grey
+seamless backdrop, soft even studio light, sharp focus throughout.
+Exclusions: no second eye, no props, no other characters, no text.
+
+## parameters
+{
+  "model": "dola-seedream-5-5-261028",
+  "size": "1728x2592",
+  "response_format": "b64_json",
+  "watermark": false
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+none
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794775013,
+  "usage": {
+    "input_images": 0,
+    "generated_images": 1,
+    "output_tokens": 17496,
+    "total_tokens": 17496
+  },
+  "size": "1728x2592",
+  "output_format": "png",
+  "background": "opaque"
+}

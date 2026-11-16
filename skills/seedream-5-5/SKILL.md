@@ -91,7 +91,8 @@ video-keyframe images are in [references/prompting.md](references/prompting.md).
 ## Check before you spend a render
 
 - **Asymmetric details** (one eye, one sleeve, a scar on one side) drift toward symmetry.
-  Name the side and what replaces the missing part, then repeat it in the exclusions.
+  Name the side **from the viewer's point of view** ("image-left"), say what replaces the
+  missing part, then repeat it in the exclusions.
 - **Rows of identical objects** come out with the wrong count or uneven shapes. Generate one
   object and duplicate it in an editor.
 - **More than two identifiable people** makes faces and costumes blend together. Keep to two,

@@ -11,10 +11,16 @@ mirrored, doubled or dropped.
 **Fix:** Name the asymmetry, say which side it is on, and say what fills the other side. Then
 repeat it in the exclusions.
 
-> exactly one black button eye, on the toy's left; on the right side, where the second eye
-> would be, a small stitched X in red thread. … Exclusions: no second eye.
+> exactly one black button eye, on the image-left side of the face; on the image-right side,
+> where the second eye would be, a small stitched X in red thread. … Exclusions: no second eye.
 
 Put the same wording in the character sheet and in every later prompt.
+
+**Say "image-left" / "image-right", not "the character's left".** In testing, "a button eye on the
+toy's left" landed on the *viewer's* left, while "a patch on the left knee" landed on the toy's own
+left. Seedream is inconsistent about whose left you mean. Describe sides from the viewer's point of
+view ("on the image-left side of its face"). Once a reference image exists, write "exactly where
+they are in Image 1" instead of naming a side again.
 
 ## 2. Rows of identical objects
 

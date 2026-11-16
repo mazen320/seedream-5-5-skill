@@ -41,6 +41,12 @@ python skills/seedream-5-5/scripts/seedream.py generate --prompt-file shelf.txt 
 Next, cut out the hero dripper and place twelve copies on the shelf. Give each copy a small
 contact shadow, and vary the spacing by a pixel or two.
 
+## Result
+
+<img src="../assets/gallery/dripper.jpg" width="420">
+
+The hero render, made from a text-only version of this prompt with no reference photo (sidecar: [`dripper.txt`](../assets/gallery/dripper.txt)).
+
 ## Why it works
 
 - The prompt says what to take from Image 1 **and** what to ignore. This stops the kitchen

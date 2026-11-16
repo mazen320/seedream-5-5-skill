@@ -10,3 +10,8 @@ renders/
 .env
 .env.*
 __pycache__/
+# full-size renders stay local; web-sized copies live in assets/gallery
+assets/renders/
+!assets/gallery/*.jpg
+!assets/gallery/*.png
+_preview.html
