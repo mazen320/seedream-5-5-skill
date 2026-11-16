@@ -211,11 +211,6 @@ Tasks: a transparent sticker, a Chinese poster, a storyboard, a precision edit, 
 2-reference ad, a magazine cover, a website hero, dark mode plus a Figma hand-off, game icons, one
 image in 3 social sizes, a fal request (dry run), and a translated poster.
 
-**What testing caught.** On its first run of the newer tasks the skill had one fact out of date
-(fal had just added Seedream 5.5) and picked an expensive method for the Figma hand-off (20 billed
-layer images where rebuilding the screen as an SVG costs none). Both were fixed and re-tested.
-Every round, with the numbers before and after the fixes, is in the [evidence log](evidence/README.md).
-
 A strong agent with no skill already gets most single images right. The skill adds what an agent
 can't improvise: current platform facts, the failure modes we measured, and the project-asset
 pipeline (style lock, batches, exact sizes, icon sets, cost control).
