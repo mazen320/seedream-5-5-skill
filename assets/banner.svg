@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="440" viewBox="0 0 1280 440" role="img" aria-label="Seedream 5.5 Skill: director-grade prompts and key-safe image generation for any coding agent">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A0F24"/>
+      <stop offset="0.55" stop-color="#17123A"/>
+      <stop offset="1" stop-color="#3B1640"/>
+    </linearGradient>
+    <radialGradient id="seed" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FFE7A8"/>
+      <stop offset="0.35" stop-color="#FFB547"/>
+      <stop offset="0.7" stop-color="#FF6A3D" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#FF3D6E" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FF8A4C" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#FF8A4C" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="word" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFD27A"/>
+      <stop offset="1" stop-color="#FF6F91"/>
+    </linearGradient>
+    <clipPath id="card"><rect width="1280" height="440" rx="24"/></clipPath>
+  </defs>
+  <g clip-path="url(#card)">
+    <rect width="1280" height="440" fill="url(#bg)"/>
+    <!-- dream ripples around the seed -->
+    <circle cx="1030" cy="220" r="330" fill="url(#glow)"/>
+    <g fill="none" stroke="#FFC37A">
+      <circle cx="1030" cy="220" r="96"  stroke-opacity="0.55" stroke-width="1.5"/>
+      <circle cx="1030" cy="220" r="146" stroke-opacity="0.35" stroke-width="1.2"/>
+      <circle cx="1030" cy="220" r="204" stroke-opacity="0.22" stroke-width="1"/>
+      <circle cx="1030" cy="220" r="270" stroke-opacity="0.12" stroke-width="1"/>
+      <circle cx="1030" cy="220" r="344" stroke-opacity="0.07" stroke-width="1"/>
+    </g>
+    <circle cx="1030" cy="220" r="78" fill="url(#seed)"/>
+    <circle cx="1030" cy="220" r="26" fill="#FFF4D6"/>
+    <!-- stars -->
+    <g fill="#FFFFFF">
+      <circle cx="720" cy="62" r="1.6" opacity="0.7"/><circle cx="812" cy="118" r="1.1" opacity="0.5"/>
+      <circle cx="1188" cy="64" r="1.8" opacity="0.8"/><circle cx="1236" cy="168" r="1.1" opacity="0.5"/>
+      <circle cx="880" cy="372" r="1.4" opacity="0.6"/><circle cx="1168" cy="390" r="1.2" opacity="0.5"/>
+      <circle cx="760" cy="300" r="1" opacity="0.4"/><circle cx="1250" cy="300" r="1.5" opacity="0.6"/>
+      <circle cx="930" cy="40" r="1.2" opacity="0.5"/><circle cx="660" cy="200" r="1" opacity="0.35"/>
+    </g>
+    <!-- copy -->
+    <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+      <text x="72" y="108" fill="#FFC37A" font-size="15" font-weight="600" letter-spacing="3.5">AGENT SKILL  ·  BYTEPLUS MODELARK</text>
+      <text x="68" y="196" fill="#FFFFFF" font-size="84" font-weight="800" letter-spacing="-2">Seedream <tspan fill="url(#word)">5.5</tspan></text>
+      <text x="72" y="248" fill="#C9C6E8" font-size="25" font-weight="400">Director-grade prompts and key-safe image</text>
+      <text x="72" y="282" fill="#C9C6E8" font-size="25" font-weight="400">generation, for any coding agent.</text>
+      <g font-size="15" font-weight="600" fill="#E9E6FF">
+        <rect x="72"  y="330" width="122" height="36" rx="18" fill="#FFFFFF" fill-opacity="0.09" stroke="#FFFFFF" stroke-opacity="0.18"/>
+        <text x="133" y="353" text-anchor="middle">Claude Code</text>
+        <rect x="204" y="330" width="80"  height="36" rx="18" fill="#FFFFFF" fill-opacity="0.09" stroke="#FFFFFF" stroke-opacity="0.18"/>
+        <text x="244" y="353" text-anchor="middle">Codex</text>
+        <rect x="294" y="330" width="84"  height="36" rx="18" fill="#FFFFFF" fill-opacity="0.09" stroke="#FFFFFF" stroke-opacity="0.18"/>
+        <text x="336" y="353" text-anchor="middle">Cursor</text>
+        <rect x="388" y="330" width="116" height="36" rx="18" fill="#FFFFFF" fill-opacity="0.09" stroke="#FFFFFF" stroke-opacity="0.18"/>
+        <text x="446" y="353" text-anchor="middle">Gemini CLI</text>
+        <rect x="514" y="330" width="94"  height="36" rx="18" fill="#FFFFFF" fill-opacity="0.09" stroke="#FFFFFF" stroke-opacity="0.18"/>
+        <text x="561" y="353" text-anchor="middle">Copilot</text>
+        <rect x="618" y="330" width="104" height="36" rx="18" fill="#FFB547" fill-opacity="0.16" stroke="#FFB547" stroke-opacity="0.5"/>
+        <text x="670" y="353" text-anchor="middle" fill="#FFD27A">+70 more</text>
+      </g>
+    </g>
+  </g>
+</svg>

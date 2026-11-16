@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="560" viewBox="0 0 1280 560" role="img" aria-label="Anatomy of a Seedream prompt: nine parts in order, from deliverable to exclusions">
+  <defs>
+    <linearGradient id="abg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0E1330"/><stop offset="1" stop-color="#1D1438"/>
+    </linearGradient>
+    <clipPath id="ac"><rect width="1280" height="560" rx="24"/></clipPath>
+  </defs>
+  <g clip-path="url(#ac)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+    <rect width="1280" height="560" fill="url(#abg)"/>
+    <text x="64" y="66" fill="#FFFFFF" font-size="26" font-weight="700">Anatomy of a Seedream prompt</text>
+    <text x="64" y="94" fill="#9C98C4" font-size="16">Prose, in this order. One sentence or less per part.</text>
+    <line x1="64" y1="116" x2="1216" y2="116" stroke="#FFFFFF" stroke-opacity="0.08"/>
+    <g font-size="15" font-weight="700">
+      <rect x="64" y="134" width="190" height="32" rx="8" fill="#FFB547" fill-opacity="0.18"/><text x="80" y="155" fill="#FFC970">1  DELIVERABLE</text>
+      <rect x="64" y="180" width="190" height="32" rx="8" fill="#FF9A4D" fill-opacity="0.18"/><text x="80" y="201" fill="#FFB27A">2  SUBJECT</text>
+      <rect x="64" y="226" width="190" height="32" rx="8" fill="#FF7A6B" fill-opacity="0.18"/><text x="80" y="247" fill="#FF9C90">3  LAYOUT</text>
+      <rect x="64" y="272" width="190" height="32" rx="8" fill="#F76C9C" fill-opacity="0.18"/><text x="80" y="293" fill="#FF94BC">4  MATERIALS</text>
+      <rect x="64" y="318" width="190" height="32" rx="8" fill="#D46CF0" fill-opacity="0.18"/><text x="80" y="339" fill="#E39AFA">5  LIGHTING</text>
+      <rect x="64" y="364" width="190" height="32" rx="8" fill="#A07CFF" fill-opacity="0.18"/><text x="80" y="385" fill="#BBA2FF">6  CAMERA</text>
+      <rect x="64" y="410" width="190" height="32" rx="8" fill="#7896FF" fill-opacity="0.18"/><text x="80" y="431" fill="#A0B6FF">7  STYLE</text>
+      <rect x="64" y="456" width="190" height="32" rx="8" fill="#4FB8E8" fill-opacity="0.18"/><text x="80" y="477" fill="#86D2F2">8  EXACT TEXT</text>
+      <rect x="64" y="502" width="190" height="32" rx="8" fill="#FF4D6A" fill-opacity="0.22"/><text x="80" y="523" fill="#FF8A9C">9  EXCLUSIONS</text>
+    </g>
+    <g font-size="17" fill="#E6E3FF">
+      <text x="284" y="156">A photorealistic medium shot</text>
+      <text x="284" y="202">of a ceramicist in her sixties with a silver braid and a clay-streaked apron,</text>
+      <text x="284" y="248">seated at a wheel on the left third, shelves of bisque pots behind her.</text>
+      <text x="284" y="294">Wet terracotta, a worn oak bench, linen sleeves rolled to the elbow.</text>
+      <text x="284" y="340">Soft north-window light from the right, cool 5600K, gentle falloff.</text>
+      <text x="284" y="386">Shot on a 50mm lens at f/2.8, background softly blurred.</text>
+      <text x="284" y="432">Muted earthy palette, fine film grain, calm documentary mood.</text>
+      <text x="284" y="478">A small chalkboard on the shelf reads <tspan fill="#86D2F2" font-weight="700">"OPEN STUDIO"</tspan>.</text>
+      <text x="284" y="524"><tspan fill="#FF8A9C" font-weight="700">Exclusions:</tspan> no extra people, no logos, no watermark.</text>
+    </g>
+  </g>
+</svg>
