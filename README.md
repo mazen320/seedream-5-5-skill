@@ -17,10 +17,10 @@ It works in Claude Code, Codex, Cursor, Gemini CLI, Copilot and about 70 other a
 [![Agent Skills](https://img.shields.io/badge/agentskills.io-compliant-D46CF0?style=flat-square&labelColor=17123A)](https://agentskills.io/specification)
 ![Python](https://img.shields.io/badge/python-3.8%2B-7896FF?style=flat-square&labelColor=17123A)
 ![Dependencies](https://img.shields.io/badge/dependencies-0-4FB8E8?style=flat-square&labelColor=17123A)
-[![Stars](https://img.shields.io/github/stars/<you>/seedream-5-5-skill?style=flat-square&color=FF7A6B&labelColor=17123A)](https://github.com/<you>/seedream-5-5-skill/stargazers)
+[![Stars](https://img.shields.io/github/stars/mazen320/seedream-5-5-skill?style=flat-square&color=FF7A6B&labelColor=17123A)](https://github.com/mazen320/seedream-5-5-skill/stargazers)
 
 ```bash
-npx skills add <you>/seedream-5-5-skill
+npx skills add mazen320/seedream-5-5-skill
 ```
 
 **[Gallery](#gallery)** · **[How it prompts](#how-it-prompts)** · **[Install](#install)** · **[Failure modes](#the-failure-modes-it-catches)** · **[CLI](#use-the-script-directly)**
@@ -149,11 +149,11 @@ All of them, with symptoms and fixes, are in [`failure-modes.md`](skills/seedrea
 
 <table>
 <tr><th>Agent</th><th>How</th></tr>
-<tr><td><b>Any agent</b></td><td><code>npx skills add &lt;you&gt;/seedream-5-5-skill</code> (<a href="https://github.com/vercel-labs/skills">skills CLI</a>)</td></tr>
-<tr><td><b>Claude Code</b></td><td><code>/plugin marketplace add &lt;you&gt;/seedream-5-5-skill</code>, then <code>/plugin install seedream-5-5</code></td></tr>
+<tr><td><b>Any agent</b></td><td><code>npx skills add mazen320/seedream-5-5-skill</code> (<a href="https://github.com/vercel-labs/skills">skills CLI</a>)</td></tr>
+<tr><td><b>Claude Code</b></td><td><code>/plugin marketplace add mazen320/seedream-5-5-skill</code>, then <code>/plugin install seedream-5-5</code></td></tr>
 <tr><td><b>Codex</b></td><td>Copy <code>skills/seedream-5-5/</code> to <code>~/.agents/skills/</code></td></tr>
 <tr><td><b>Cursor</b></td><td>Copy it to <code>~/.cursor/skills/</code> or <code>.agents/skills/</code></td></tr>
-<tr><td><b>Gemini CLI</b></td><td><code>gemini skills install https://github.com/&lt;you&gt;/seedream-5-5-skill --path skills/seedream-5-5</code></td></tr>
+<tr><td><b>Gemini CLI</b></td><td><code>gemini skills install https://github.com/mazen320/seedream-5-5-skill --path skills/seedream-5-5</code></td></tr>
 <tr><td><b>Copilot</b></td><td>Copy it to <code>~/.copilot/skills/</code> or <code>.github/skills/</code></td></tr>
 </table>
 
@@ -231,7 +231,7 @@ python -m unittest discover -s tests -v
 
 <img src="assets/gallery/logo.png" alt="" width="48">
 
-If this skill saved you a render, **[give it a ⭐](https://github.com/<you>/seedream-5-5-skill)**.
+If this skill saved you a render, **[give it a ⭐](https://github.com/mazen320/seedream-5-5-skill)**.
 
 <sub>MIT licensed. Not affiliated with ByteDance or BytePlus. Model IDs, limits and pricing change, so check <code>seedream.py models</code>.<br>
 Part of the prompt structure is adapted from the Seedream 5.5 guide in <a href="https://github.com/Evolink-AI/awesome-seedream-5-5-guide-and-prompt">Evolink-AI/awesome-seedream-5-5-guide-and-prompt</a> (CC BY 4.0).</sub>
