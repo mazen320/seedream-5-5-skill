@@ -1,0 +1,12 @@
+# generated images and their sidecars
+seedream_out/
+renders/
+*.png
+*.jpg
+*.jpeg
+*.webp
+!examples/**/*.png
+# never commit secrets
+.env
+.env.*
+__pycache__/
