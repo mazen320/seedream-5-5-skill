@@ -206,3 +206,29 @@ free-floating object ([image](img/r5_empty-trips_v2.png)). See
 | Hero | Link preview (1200×630) | Empty state | Logo mark |
 |:-:|:-:|:-:|:-:|
 | [<img src="img/r5_hero.jpg" width="300">](img/r5_hero.txt) | [<img src="img/r5_og-image.jpg" width="220">](img/r5_og-image.txt) | [<img src="img/r5_empty-trips.png" width="140">](img/r5_empty-trips.txt) | [<img src="img/r5_logo-mark.png" width="140">](img/r5_logo-mark.txt) |
+
+## Round 6: editing
+
+Nine kinds of edit, each run once on Seedream 5.5, with the original as Image 1 and a named
+keep-list. The recipes are in [`editing.md`](../skills/seedream-5-5/references/editing.md). In each
+pair below, the left image is the input and the right is the output.
+
+| Edit | Result |
+|---|---|
+| Background swap (product) | ✅ Product unchanged |
+| Colour change (glaze) | ✅ Exact; rim and shadows kept |
+| Relight (blue hour + lamp) | ✅ Person kept; it added a visible lamp |
+| Restore + colourise an old photo | ✅ Same person; colours are a guess |
+| Edit by drawing red marks | ✅ Kitten in the circle, marks erased |
+| Remove passers-by | ✅ Customers and chalkboard kept |
+| Restyle as watercolour | ✅ Layout kept; one extra patch on the bear |
+| Sketch to photo | ✅ Layout followed |
+| Outpaint 2:3 → 16:9 | ❌ A poster inside a picture. Fixed with "no inset panel" (✅, lettering moved), or best, a blurred padded canvas (✅, layout kept) |
+
+| | |
+|:-:|:-:|
+| [<img src="img/r6_bg.jpg" width="400">](img/r6_bg.txt) | [<img src="img/r6_recolor.jpg" width="400">](img/r6_recolor.txt) |
+| [<img src="img/r6_relight.jpg" width="400">](img/r6_relight.txt) | [<img src="img/r6_restore.jpg" width="400">](img/r6_restore.txt) |
+| [<img src="img/r6_markup.jpg" width="400">](img/r6_markup.txt) | [<img src="img/r6_remove.jpg" width="400">](img/r6_remove.txt) |
+| [<img src="img/r6_style.jpg" width="400">](img/r6_style.txt) | [<img src="img/r6_sketch.jpg" width="400">](img/r6_sketch.txt) |
+| [<img src="img/r6_outpaint.jpg" width="400">](img/r6_outpaint.txt) ❌ | [<img src="img/r6_outpaint3.jpg" width="400">](img/r6_outpaint3.txt) ✅ padded canvas |

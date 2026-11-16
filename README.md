@@ -34,6 +34,8 @@ npx skills add mazen320/seedream-5-5-skill
 Ask for "the images for my landing page" and get a finished kit in your repo, not one picture in a
 temp folder:
 
+<img src="assets/demo.gif" alt="Agent plans a 4-image kit, shows the cost, generates it in one style, then makes the favicon set" width="100%">
+
 | Hero, 21:9 | Link preview, exact 1200×630 | Empty state + logo (transparent) | Favicon set |
 |:-:|:-:|:-:|:-:|
 | <img src="evidence/img/r5_hero.jpg" alt="Train on a viaduct, risograph style"> | <img src="evidence/img/r5_og-image.jpg" alt="Fernway link preview card"> | <img src="evidence/img/r5_empty-trips.png" width="110" alt="Suitcase on a platform"><img src="evidence/img/r5_logo-mark.png" width="110" alt="Fern and railway mark"> | <img src="evidence/img/r5_apple-touch-icon.png" width="64" alt="apple-touch-icon"> <img src="evidence/img/r5_favicon-32.png" width="32" alt="favicon"> |
@@ -107,6 +109,17 @@ Every image here is a first render, with no re-rolls or retouching. Click any im
 </tr>
 </table>
 
+### Edit anything: restore, relight, swap, draw-to-edit, outpaint
+
+| Restore + colourise an old photo | Draw a circle: "add a kitten here, then remove the marks" |
+|:-:|:-:|
+| [<img src="evidence/img/r6_restore.jpg" alt="Damaged sepia photo restored and colourised">](evidence/img/r6_restore.txt) | [<img src="evidence/img/r6_markup.jpg" alt="Red circle edit adds a kitten">](evidence/img/r6_markup.txt) |
+| **Swap the background, keep the product** | **Extend a poster to 16:9** (padded canvas, then fill) |
+| [<img src="evidence/img/r6_bg.jpg" alt="Product moved onto wet slate at night">](evidence/img/r6_bg.txt) | [<img src="evidence/img/r6_outpaint3.jpg" alt="Poster extended into a seamless banner">](evidence/img/r6_outpaint3.txt) |
+
+9 tested edit types, with the prompt formula and the one that fails (see the
+[editing playbook](skills/seedream-5-5/references/editing.md)).
+
 ### UI and design: apps, websites, games, kiosks, events, layers
 
 <table>
@@ -144,6 +157,7 @@ Every image here is a first render, with no re-rolls or retouching. Click any im
 | ✂️ **Split** | `export.py split sheet.png` cuts a transparent sheet of icons, stickers or sprites into one trimmed PNG per item, named and in reading order |
 | 🪞 **Mirror fix** | `export.py --flip` corrects a one-sided detail that landed on the wrong side |
 | 📋 **Batch + style lock** | `seedream.py batch` turns a manifest into a consistent set. It estimates the cost first and skips unchanged assets |
+| 🎨 **Match your brand** | `export.py style logo.png screenshot.png` pulls your real palette into `.seedream/style.md`, so new images match what you already have |
 | 🏷️ **Icons** | `export.py icons` turns one logo into favicons, PWA, iOS `AppIcon.appiconset` and Android mipmaps, plus the HTML tags |
 | 💸 **Cost ledger** | Every paid call is logged next to the images; `seedream.py costs` sums it up |
 | 📚 **Prompt library** | [31 copy-paste prompts](recipes/README.md), each shown with the exact image it produced |
@@ -262,7 +276,7 @@ The agent then:
 <table>
 <tr><th>Agent</th><th>How</th></tr>
 <tr><td><b>Any agent</b></td><td><code>npx skills add mazen320/seedream-5-5-skill</code> (<a href="https://github.com/vercel-labs/skills">skills CLI</a>)</td></tr>
-<tr><td><b>Claude Code</b></td><td><code>/plugin marketplace add mazen320/seedream-5-5-skill</code>, then <code>/plugin install seedream-5-5</code></td></tr>
+<tr><td><b>Claude Code</b></td><td><code>/plugin marketplace add mazen320/seedream-5-5-skill</code>, then <code>/plugin install seedream-5-5</code>. Adds <code>/seedream</code>, <code>/seedream-kit</code>, <code>/seedream-edit</code> and <code>/seedream-icons</code></td></tr>
 <tr><td><b>Codex</b></td><td>Copy <code>skills/seedream-5-5/</code> to <code>~/.agents/skills/</code></td></tr>
 <tr><td><b>Cursor</b></td><td>Copy it to <code>~/.cursor/skills/</code> or <code>.agents/skills/</code></td></tr>
 <tr><td><b>Gemini CLI</b></td><td><code>gemini skills install https://github.com/mazen320/seedream-5-5-skill --path skills/seedream-5-5</code></td></tr>
@@ -331,11 +345,13 @@ skills/seedream-5-5/
 ├── evals/                    skill-creator test cases (with vs without skill)
 └── references/
     ├── prompting.md          14 templates (tested ones marked)
-    ├── failure-modes.md      21 failure modes, each labelled Tested / Official / Reported
+    ├── failure-modes.md      22 failure modes, each labelled Tested / Official / Reported
     ├── use-cases.md          12 playbooks and a model picker
     ├── ui-ux.md              apps, websites, dashboards, games, kiosks, dark mode, mockups, icons, Figma hand-off
     ├── project-assets.md     style lock, batch manifests, exact sizes, icon sets, where each framework keeps images
+    ├── editing.md            9 tested edit types: swap, relight, restore, remove, restyle, sketch, outpaint, draw-to-edit
     └── providers.md          versions, IDs, fields, prices, error codes
+commands/                     /seedream, /seedream-kit, /seedream-edit, /seedream-icons (Claude Code)
 recipes/                      31 copy-paste prompts, each with the image it produced
 evidence/                     every test render with its prompt, and what it proved
 examples/                     4 worked examples with real results (incl. a full website asset kit)

@@ -23,7 +23,13 @@ If nothing matches, ask once, or use `assets/generated/`. Never leave final asse
 
 ## 2. Lock the style once
 
-Write the look to `.seedream/style.md` (one paragraph: medium, palette with hex codes, line
+If the user already has a brand (a logo, a site, product photos), start from it:
+`python scripts/export.py style logo.png screenshot.png` writes `.seedream/style.md` with the
+real palette (hex codes and shares). Then look at the images and replace its placeholder line with
+one sentence on the look. *Tested*: from the Fernway hero and logo it recovered the cream,
+sage, terracotta and ink of the original style.
+
+Otherwise write the look to `.seedream/style.md` (one paragraph: medium, palette with hex codes, line
 quality, lighting, what to avoid). Pass it with `--style .seedream/style.md`, or set `style_file`
 in a manifest. The script appends it to every prompt as "House style for this project: …".
 

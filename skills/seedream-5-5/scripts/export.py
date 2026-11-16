@@ -7,12 +7,14 @@ Requires Pillow (`pip install pillow`). The generator script itself needs nothin
     python export.py presets
     python export.py out/poster.png --to instagram-post --to story
     python export.py out/poster.png --to instagram-post --fit pad --pad-color "#f4efe6"
+    python export.py poster.png --size 2560x1440 --fit pad --pad-color blur   # outpaint canvas
     python export.py out/captain.png --flip                      # mirror horizontally
     python export.py out/hero.png --size 1600x900 --gravity top  # any custom size
     python export.py merge original.jpg edited.png               # keep untouched pixels original
     python export.py layers out/poster_layers                     # stack, SVG for Figma, check vs source
     python export.py split out/icons.png --names sun,cloud,rain   # cut a transparent sheet into assets
     python export.py icons out/logo.png --out public/icons         # favicons, PWA, iOS, Android + HTML tags
+    python export.py style logo.png screenshot.png                # start .seedream/style.md from your brand
 
 Every export is written next to the source as <name>_<preset>.<ext> with a small
 .txt sidecar saying how it was derived. Sources are never overwritten.
@@ -97,6 +99,19 @@ def contain_pad(Image, im, w, h, color, gravity):
     gx, gy = GRAVITY[gravity]
     canvas.paste(im2, (round((w - rw) * gx), round((h - rh) * gy)), im2 if im2.mode == "RGBA" else None)
     return canvas, scale
+
+
+def blur_pad(Image, im, w, h, gravity):
+    """Fit inside w x h and fill the rest with a blurred, desaturated stretch: an outpaint canvas."""
+    from PIL import ImageFilter
+    src = im.convert("RGB")
+    scale = min(w / src.width, h / src.height)
+    rw, rh = round(src.width * scale), round(src.height * scale)
+    fill = src.resize((w, h), Image.LANCZOS).filter(ImageFilter.GaussianBlur(max(w, h) / 40))
+    fill = Image.blend(fill, Image.new("RGB", (w, h), (128, 128, 128)), 0.35)
+    gx, gy = GRAVITY[gravity]
+    fill.paste(src.resize((rw, rh), Image.LANCZOS), (round((w - rw) * gx), round((h - rh) * gy)))
+    return fill, scale
 
 
 def unique(path):
@@ -388,6 +403,67 @@ def split(argv):
     return 0
 
 
+def palette(images, n=6):
+    """Dominant colours across images as [(hex, share)], ignoring transparent pixels and merging
+    near-duplicates."""
+    Image = need_pillow()
+    counts = {}
+    for path in images:
+        im = Image.open(path).convert("RGBA")
+        im.thumbnail((256, 256))
+        data = im.tobytes()
+        px = [tuple(data[i:i + 3]) for i in range(0, len(data), 4) if data[i + 3] > 128]
+        if not px:
+            continue
+        flat = Image.new("RGB", (len(px), 1))
+        flat.putdata(px)
+        q = flat.quantize(colors=16, method=Image.MEDIANCUT)
+        pal = q.getpalette()
+        for count, idx in q.getcolors():
+            rgb = tuple(pal[idx * 3: idx * 3 + 3])
+            counts[rgb] = counts.get(rgb, 0) + count
+    total = float(sum(counts.values())) or 1.0
+    picked = []
+    for rgb, c in sorted(counts.items(), key=lambda kv: -kv[1]):
+        for i, (prgb, pc) in enumerate(picked):
+            if sum((a - b) ** 2 for a, b in zip(rgb, prgb)) < 40 ** 2:     # same colour family
+                picked[i] = (prgb, pc + c)
+                break
+        else:
+            picked.append((rgb, c))
+    picked.sort(key=lambda t: -t[1])
+    return [("#{:02X}{:02X}{:02X}".format(*rgb), round(c / total, 3)) for rgb, c in picked[:n]]
+
+
+def style(argv):
+    """Start .seedream/style.md from images you already have (logo, screenshot, product shot)."""
+    p = argparse.ArgumentParser(prog="export.py style")
+    p.add_argument("images", nargs="+", help="Logo, website screenshot, product photos...")
+    p.add_argument("--out", default=".seedream/style.md", help="Style file to write (default .seedream/style.md)")
+    p.add_argument("--colors", type=int, default=6)
+    a = p.parse_args(argv)
+    for path in a.images:
+        if not os.path.isfile(path):
+            sys.exit("error: not found: " + path)
+    cols = palette(a.images, a.colors)
+    if os.path.exists(a.out):
+        sys.exit("error: {} already exists; edit it, or pass --out somewhere else.".format(a.out))
+    os.makedirs(os.path.dirname(a.out) or ".", exist_ok=True)
+    names = ", ".join(os.path.basename(x) for x in a.images)
+    pal = ", ".join("{} ({:.0%})".format(h, s) for h, s in cols)
+    nl = chr(10)
+    text = ("Palette taken from {}: {}. Use these as the dominant colours, in roughly these proportions." + nl +
+            "<!-- Agent: look at the source images and replace this line with one sentence on the look:" + nl +
+            "medium (photo / flat vector / 3D / illustration), line and shape quality, texture, lighting, mood," + nl +
+            "and what to avoid. Keep the palette line above. -->" + nl).format(names, pal)
+    with open(a.out, "w", encoding="utf-8") as f:
+        f.write(text)
+    for h, s in cols:
+        print("  {}  {:>5.1%}".format(h, s))
+    print("wrote {} (finish the description line, then use --style {})".format(a.out, a.out))
+    return 0
+
+
 ICON_SETS = {
     # file: (size, needs an opaque background)
     "favicon-16x16.png": (16, False), "favicon-32x32.png": (32, False), "favicon-48x48.png": (48, False),
@@ -504,6 +580,8 @@ def main(argv=None):
         return split(argv[1:])
     if argv[:1] == ["icons"]:
         return icons(argv[1:])
+    if argv[:1] == ["style"]:
+        return style(argv[1:])
 
     p = argparse.ArgumentParser(description="Export a Seedream image for a platform.")
     p.add_argument("image", help="Source image (never modified)")
@@ -513,7 +591,9 @@ def main(argv=None):
                    help="crop = fill and trim (default); pad = fit whole image and pad")
     p.add_argument("--gravity", choices=sorted(GRAVITY), default="center",
                    help="Which part to keep when cropping / where to place when padding")
-    p.add_argument("--pad-color", default="#ffffff", help="#rrggbb or 'transparent' (with --fit pad)")
+    p.add_argument("--pad-color", default="#ffffff",
+                   help="#rrggbb, 'transparent' or 'blur' (with --fit pad). 'blur' fills with a soft, greyed stretch "
+                        "of the image: the canvas to send for an outpaint ('fill the blurred areas')")
     p.add_argument("--flip", action="store_true", help="Mirror horizontally (fix a detail on the wrong side)")
     p.add_argument("--format", choices=["png", "jpeg", "webp"], help="Output format (default: png if transparent, else jpeg)")
     p.add_argument("--out", help="Output folder (default: next to the source)")
@@ -554,7 +634,10 @@ def main(argv=None):
                 print("warning: {} trims {:.0%} of the image; check nothing important was cut, "
                       "or use --fit pad / --gravity.".format(label, max(lost_w, lost_h)), file=sys.stderr)
         else:
-            im, scale = contain_pad(Image, base, w, h, hex_color(a.pad_color, base.mode), a.gravity)
+            if a.pad_color.lower() == "blur":
+                im, scale = blur_pad(Image, base, w, h, a.gravity)
+            else:
+                im, scale = contain_pad(Image, base, w, h, hex_color(a.pad_color, base.mode), a.gravity)
             how = "op: {}fitted inside {}x{} and padded with {}".format(flip_note, w, h, a.pad_color)
         if scale > 1.05:
             print("warning: {} upscales the source {:.1f}x; for print, use a dedicated upscaler.".format(label, scale),

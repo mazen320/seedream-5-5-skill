@@ -1,0 +1,43 @@
+# Seedream generation record
+created: 2026-11-16T09:01:29Z
+image: style.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+Redraw Image 1 as a soft watercolour children's-book illustration with loose ink outlines, visible paper texture and gentle washes. Keep the composition, the camera angle and every element exactly where it is in Image 1: the girl with red curls and a mustard jumper reading on the window seat, the knitted bear beside her with exactly one button eye and a red stitched X where the other eye was, the window, the curtains and the lamp. No text.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "Redraw Image 1 as a soft watercolour children's-book illustration with loose ink outlines, visible paper texture and gentle washes. Keep the composition, the camera angle and every element exactly where it is in Image 1: the girl with red curls and a mustard jumper reading on the window seat, the knitted bear beside her with exactly one button eye and a red stitched X where the other eye was, the window, the curtains and the lamp. No text.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "2560x1440",
+  "image": "<inline image>"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+[
+  {
+    "source": "scene.jpg",
+    "sha256": "67a99e5dd523bd8c6768465a9c5d68ae927a56dc44761c596a6bbbfedd9a18f2",
+    "bytes": 717504,
+    "mime": "image/jpeg"
+  }
+]
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794819684,
+  "usage": {
+    "input_images": 1,
+    "generated_images": 1,
+    "output_tokens": 14400,
+    "total_tokens": 14400
+  }
+}
+
+## image
+Left: the input. Right: the output.

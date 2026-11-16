@@ -67,7 +67,8 @@ When the images belong to a codebase, do the whole job, not just the render
 
 1. Find where the project keeps images (`public/`, `static/`, `Assets/`, `Assets.xcassets`…) and
    write there, not to a temp folder.
-2. Lock the look in `.seedream/style.md` and pass `--style` (or `style_file` in a manifest).
+2. Lock the look in `.seedream/style.md` and pass `--style` (or `style_file` in a manifest). If
+   the user has a logo or site already, start it with `export.py style logo.png screenshot.png`.
 3. For more than two assets, write `.seedream/assets.json` and run `batch`. It prints the plan
    and the estimated cost and spends nothing until `--yes`. Show the user that plan first.
    Re-runs skip unchanged assets.
@@ -98,10 +99,11 @@ use 1 when the brief is precise.
 | The user has… | Mode | What the prompt must do |
 |---|---|---|
 | Only an idea | Text-to-image | Follow the prompt structure below |
-| One image to change | Edit | Action + named target + change, then everything to keep |
+| One image to change | Edit | Action + named target + change, then everything to keep. Recipes for background swaps, relighting, restoration, removal, restyling, sketches and outpainting: [references/editing.md](references/editing.md) |
 | Several images to combine | Multi-reference | Give each image a role: what to take from it and what to ignore |
 | A previous output to refine | Multi-round edit | Use the last output as Image 1 and make one change per round |
-| A specific region to change | Region edit | `<bbox>x1 y1 x2 y2</bbox>` or `<point>x y</point>` on a 0–999 grid |
+| A specific region to change | Region edit | `<bbox>x1 y1 x2 y2</bbox>` on a 0–999 grid, or draw a red circle on the image and say "inside the red circle … then remove every red mark" |
+| A wider canvas | Outpaint | `export.py --fit pad --pad-color blur`, then "fill the blurred areas"; never just "extend to 16:9" (it frames the original) |
 | A need for a cut-out asset | Transparent | `--background transparent` (PNG) plus "Set a transparent background." |
 | A set of icons, stickers or sprites | Sheet + split | One grid render with a transparent background, then `export.py split` |
 | A flat design to make editable | Layers or rebuild | Clean UI, flat graphics: **rebuild** it as SVG/HTML with live text (no extra renders). Painterly or photo content: `--layers N --ocr`, then `export.py layers --live-text`. Every layer is billed |

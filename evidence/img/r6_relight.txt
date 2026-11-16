@@ -1,0 +1,43 @@
+# Seedream generation record
+created: 2026-11-16T09:01:28Z
+image: relight.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+Image 1 is a portrait of a ceramicist in her studio. Change only the lighting: make it late evening, with cool blue-hour light from the window behind her and a warm tungsten desk lamp from the image-right lighting her face and hands, deeper shadows, cosy contrast. Keep her face, identity, expression, hair, pose, hands, clothes, the clay piece, the studio, every object and the framing exactly as in Image 1. Keep the chalkboard text exactly as it is.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "Image 1 is a portrait of a ceramicist in her studio. Change only the lighting: make it late evening, with cool blue-hour light from the window behind her and a warm tungsten desk lamp from the image-right lighting her face and hands, deeper shadows, cosy contrast. Keep her face, identity, expression, hair, pose, hands, clothes, the clay piece, the studio, every object and the framing exactly as in Image 1. Keep the chalkboard text exactly as it is.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "2592x1728",
+  "image": "<inline image>"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+[
+  {
+    "source": "portrait.jpg",
+    "sha256": "52818bbaa9a1f2eb70c55a4cfd68e98c538e71c73c318177b0c92b77490433d2",
+    "bytes": 762480,
+    "mime": "image/jpeg"
+  }
+]
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794819684,
+  "usage": {
+    "input_images": 1,
+    "generated_images": 1,
+    "output_tokens": 17496,
+    "total_tokens": 17496
+  }
+}
+
+## image
+Left: the input. Right: the output.

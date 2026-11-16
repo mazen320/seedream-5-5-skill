@@ -1,0 +1,43 @@
+# Seedream generation record
+created: 2026-11-16T09:01:30Z
+image: restore.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+Image 1 is a damaged, faded old sepia photograph. Restore it: remove every scratch, speck and dust mark, rebuild the torn top-right corner so the scene continues naturally, recover sharpness and fine detail, and colourise it with natural, true-to-life colours. Keep the person's face, identity, age, expression, pose, hands, clothing and the whole composition exactly as in Image 1; do not beautify, slim or change her features. Keep it looking like a real photograph, not a painting.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "Image 1 is a damaged, faded old sepia photograph. Restore it: remove every scratch, speck and dust mark, rebuild the torn top-right corner so the scene continues naturally, recover sharpness and fine detail, and colourise it with natural, true-to-life colours. Keep the person's face, identity, age, expression, pose, hands, clothing and the whole composition exactly as in Image 1; do not beautify, slim or change her features. Keep it looking like a real photograph, not a painting.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "2592x1728",
+  "image": "<inline image>"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+[
+  {
+    "source": "old_photo.jpg",
+    "sha256": "3bcb3e06adfe7f72487a0e6c011d1bbb4134cc721cc25985dc16f9171e423107",
+    "bytes": 89756,
+    "mime": "image/jpeg"
+  }
+]
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794819685,
+  "usage": {
+    "input_images": 1,
+    "generated_images": 1,
+    "output_tokens": 17496,
+    "total_tokens": 17496
+  }
+}
+
+## image
+Left: the input. Right: the output.

@@ -1,0 +1,43 @@
+# Seedream generation record
+created: 2026-11-16T09:01:27Z
+image: sketch.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+Image 1 is a rough black-and-white layout sketch. Turn it into a photorealistic photo of a cosy home office that follows the sketch's layout exactly: a four-pane window in the top-right, the front edge of a wooden desk running across the lower part of the frame, an open silver laptop at centre-left, a ceramic mug on the right, and a potted plant at the far left. Soft morning daylight from the window, light oak desk, cream walls, 35mm lens at desk height, shallow depth of field. Ignore the words "rough sketch"; no text anywhere.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "Image 1 is a rough black-and-white layout sketch. Turn it into a photorealistic photo of a cosy home office that follows the sketch's layout exactly: a four-pane window in the top-right, the front edge of a wooden desk running across the lower part of the frame, an open silver laptop at centre-left, a ceramic mug on the right, and a potted plant at the far left. Soft morning daylight from the window, light oak desk, cream walls, 35mm lens at desk height, shallow depth of field. Ignore the words \"rough sketch\"; no text anywhere.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "2304x1728",
+  "image": "<inline image>"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+[
+  {
+    "source": "sketch.png",
+    "sha256": "99679cb764b5e6a50a94ab30a6eda9862700f42ca1d65ae1ef8a4732caa22abd",
+    "bytes": 13045,
+    "mime": "image/png"
+  }
+]
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794819683,
+  "usage": {
+    "input_images": 1,
+    "generated_images": 1,
+    "output_tokens": 15552,
+    "total_tokens": 15552
+  }
+}
+
+## image
+Left: the input. Right: the output.

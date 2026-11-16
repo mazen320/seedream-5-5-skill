@@ -1,0 +1,43 @@
+# Seedream generation record
+created: 2026-11-16T09:02:50Z
+image: outpaint3.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+Image 1 is a wide canvas: the centre strip is a finished illustrated poster, and the blurred grey areas on the left and right are empty space to be filled. Fill the left and right areas by continuing the poster's scene outward (the street, the buildings, the lantern strings and the market stalls) in exactly the same illustrated style, colours and lighting, so the whole image reads as one seamless wide illustration with no visible seams, frames or borders. Keep the centre strip exactly as it is, including all its lettering. Continue the dark band at the bottom across the full width. Write no new text.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "Image 1 is a wide canvas: the centre strip is a finished illustrated poster, and the blurred grey areas on the left and right are empty space to be filled. Fill the left and right areas by continuing the poster's scene outward (the street, the buildings, the lantern strings and the market stalls) in exactly the same illustrated style, colours and lighting, so the whole image reads as one seamless wide illustration with no visible seams, frames or borders. Keep the centre strip exactly as it is, including all its lettering. Continue the dark band at the bottom across the full width. Write no new text.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "2560x1440",
+  "image": "<inline image>"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+[
+  {
+    "source": "poster_padded.jpg",
+    "sha256": "6d812c9e181fa008ac561b775c7d2f203bbb73a908a82fe454864d91ec7f1576",
+    "bytes": 527480,
+    "mime": "image/jpeg"
+  }
+]
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794819766,
+  "usage": {
+    "input_images": 1,
+    "generated_images": 1,
+    "output_tokens": 14400,
+    "total_tokens": 14400
+  }
+}
+
+## image
+Left: the input. Right: the output.

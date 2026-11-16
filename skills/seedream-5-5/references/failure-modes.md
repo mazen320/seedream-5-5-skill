@@ -269,6 +269,15 @@ layerize endpoints. An agent without the skill checked fal's live schema and got
 before answering (for fal: `https://fal.ai/api/openapi/queue/openapi.json?endpoint_id=<id>`), and
 tell the user if the skill's table is out of date.
 
+## 22. "Extend the image" makes a picture inside a picture. *Tested*
+
+**Symptom:** asked to extend a 2:3 poster into a 16:9 banner, the model drew the original as a
+framed panel in the middle of a new scene.
+
+**Fix:** pad the image onto the wide canvas first (`export.py --size 2560x1440 --fit pad --pad-color
+blur`) and ask to "fill the blurred areas by continuing the scene … keep the centre strip exactly".
+Or say "one continuous illustration, no frame, no border, no inset panel". See `editing.md`.
+
 ---
 
 ## Claims we tested and could not reproduce

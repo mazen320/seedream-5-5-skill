@@ -1,0 +1,43 @@
+# Seedream generation record
+created: 2026-11-16T09:01:26Z
+image: bg.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+Image 1 is a product photo of a ceramic pour-over dripper. Replace only the background and the surface it stands on: place the dripper on a wet black slate counter in a moody kitchen at night, lit by a single warm pendant light from above-left, with a soft reflection of the dripper on the wet slate and a blurred dark tiled wall behind. Keep the dripper itself exactly as in Image 1: its shape, proportions, sage-green glaze, raw unglazed rim, holes, size in frame, position and camera angle. No text, no extra objects.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "Image 1 is a product photo of a ceramic pour-over dripper. Replace only the background and the surface it stands on: place the dripper on a wet black slate counter in a moody kitchen at night, lit by a single warm pendant light from above-left, with a soft reflection of the dripper on the wet slate and a blurred dark tiled wall behind. Keep the dripper itself exactly as in Image 1: its shape, proportions, sage-green glaze, raw unglazed rim, holes, size in frame, position and camera angle. No text, no extra objects.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "2048x2048",
+  "image": "<inline image>"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+[
+  {
+    "source": "product.jpg",
+    "sha256": "c62cd0345cfee2ee0f5212de20895ec7006746bce7118672bb427857c65f9a6d",
+    "bytes": 516023,
+    "mime": "image/jpeg"
+  }
+]
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794819681,
+  "usage": {
+    "input_images": 1,
+    "generated_images": 1,
+    "output_tokens": 16384,
+    "total_tokens": 16384
+  }
+}
+
+## image
+Left: the input. Right: the output.

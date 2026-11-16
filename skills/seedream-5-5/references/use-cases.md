@@ -58,7 +58,8 @@ Seedream is especially strong on Chinese text (*Reported*, *Tested*).
 
 ## 6. Editing by instruction
 
-Covers restoration, object swaps, retouching and region edits.
+Covers restoration, object swaps, retouching and region edits. The full playbook, with 9 tested edit
+types, is [`editing.md`](editing.md).
 
 - **Model:** 5.5. ByteDance claims stable editing over 100 rounds. We saw no meaningful drift
   over 3 rounds (*Tested*).

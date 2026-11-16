@@ -1,0 +1,43 @@
+# Seedream generation record
+created: 2026-11-16T09:02:54Z
+image: outpaint2.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+Extend Image 1, a tall illustrated event poster, into one single continuous wide 16:9 illustration. The street, the buildings, the lantern strings and the market stalls simply carry on to the left and to the right, as if the original picture had always been this wide. Seamless: no frame, no border, no inset panel, no visible edge where the original poster was, no poster-within-a-poster. The lettering stays exactly as in Image 1 ("LANTERN STREET", "NIGHT MARKET", "14-16 MARCH", "HARBOUR SQUARE · 6PM TILL LATE"), in the same typeface, and now sits over the extended scene; the dark band at the bottom extends across the full width. Write no new text.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "Extend Image 1, a tall illustrated event poster, into one single continuous wide 16:9 illustration. The street, the buildings, the lantern strings and the market stalls simply carry on to the left and to the right, as if the original picture had always been this wide. Seamless: no frame, no border, no inset panel, no visible edge where the original poster was, no poster-within-a-poster. The lettering stays exactly as in Image 1 (\"LANTERN STREET\", \"NIGHT MARKET\", \"14-16 MARCH\", \"HARBOUR SQUARE · 6PM TILL LATE\"), in the same typeface, and now sits over the extended scene; the dark band at the bottom extends across the full width. Write no new text.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "2560x1440",
+  "image": "<inline image>"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+[
+  {
+    "source": "poster.jpg",
+    "sha256": "c04ea31243752828c7e4add1ecef12e977a9e80d466539e0ef90d0e3639b746c",
+    "bytes": 1257782,
+    "mime": "image/jpeg"
+  }
+]
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794819770,
+  "usage": {
+    "input_images": 1,
+    "generated_images": 1,
+    "output_tokens": 14400,
+    "total_tokens": 14400
+  }
+}
+
+## image
+Left: the input. Right: the output.

@@ -1,0 +1,43 @@
+# Seedream generation record
+created: 2026-11-16T09:01:24Z
+image: markup.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+Image 1 has red marks drawn on it as instructions: a red circle and a red arrow. Add a small sleeping tabby kitten curled up on the cushion inside the red circle, lit by the same warm window light. Then remove every red mark completely (the circle and the arrow) and restore what was underneath them. Keep the girl, the book, the knitted bear with its one button eye and red stitched X, the window, the lamp and everything else exactly as in Image 1.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "Image 1 has red marks drawn on it as instructions: a red circle and a red arrow. Add a small sleeping tabby kitten curled up on the cushion inside the red circle, lit by the same warm window light. Then remove every red mark completely (the circle and the arrow) and restore what was underneath them. Keep the girl, the book, the knitted bear with its one button eye and red stitched X, the window, the lamp and everything else exactly as in Image 1.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "2560x1440",
+  "image": "<inline image>"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+[
+  {
+    "source": "scene_markup.jpg",
+    "sha256": "b7c838c3caf8dccf38ef1c7dbfa896e4c49c996a722e1a7ae5e5a75ee042c58d",
+    "bytes": 729075,
+    "mime": "image/jpeg"
+  }
+]
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794819680,
+  "usage": {
+    "input_images": 1,
+    "generated_images": 1,
+    "output_tokens": 14400,
+    "total_tokens": 14400
+  }
+}
+
+## image
+Left: the input. Right: the output.

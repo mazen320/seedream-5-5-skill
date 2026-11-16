@@ -1,0 +1,43 @@
+# Seedream generation record
+created: 2026-11-16T09:01:24Z
+image: remove.png (1 of 1)
+provider: byteplus
+model: dola-seedream-5-5-261028
+
+## prompt
+Image 1 is a photo of a busy café. Remove only the people walking past outside the window, and fill the window with the empty street that would be behind them. Keep the people inside the café, the barista, every table, chair and cup, the chalkboard and its text, the lighting and the framing exactly as in Image 1.
+
+## request (inline images summarised)
+{
+  "model": "dola-seedream-5-5-261028",
+  "prompt": "Image 1 is a photo of a busy café. Remove only the people walking past outside the window, and fill the window with the empty street that would be behind them. Keep the people inside the café, the barista, every table, chair and cup, the chalkboard and its text, the lighting and the framing exactly as in Image 1.",
+  "response_format": "b64_json",
+  "watermark": false,
+  "size": "2560x1440",
+  "image": "<inline image>"
+}
+
+## reference images (in order: Image 1, Image 2, ...)
+[
+  {
+    "source": "cafe.jpg",
+    "sha256": "d818522f23068c3710606350c24c257d9f303fd8116d92085af0a370cd1c8f77",
+    "bytes": 783505,
+    "mime": "image/jpeg"
+  }
+]
+
+## response metadata
+{
+  "model": "dola-seedream-5-5-261028",
+  "created": 1794819680,
+  "usage": {
+    "input_images": 1,
+    "generated_images": 1,
+    "output_tokens": 14400,
+    "total_tokens": 14400
+  }
+}
+
+## image
+Left: the input. Right: the output.

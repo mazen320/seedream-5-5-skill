@@ -708,6 +708,33 @@ class LayerTools(unittest.TestCase):
         self.assertTrue(os.path.exists(os.path.join(out, "favicon.ico")))
         self.assertIn('rel="manifest"', stdout)
 
+    def test_style_palette_from_images(self):
+        p = os.path.join(self.tmp, "brand.png")
+        im = _PIL.new("RGBA", (300, 200), (217, 115, 78, 255))           # terracotta, 2/3
+        im.paste((157, 179, 154, 255), (200, 0, 300, 200))               # sage, 1/3
+        im.paste((0, 0, 0, 0), (0, 0, 20, 20))                           # transparent corner ignored
+        im.save(p)
+        out = os.path.join(self.tmp, ".seedream", "style.md")
+        code, stdout, err = self.run_export("style", p, "--out", out)
+        self.assertEqual(code, 0, err)
+        with open(out, encoding="utf-8") as f:
+            text = f.read()
+        self.assertIn("#D9734E", text)
+        self.assertIn("#9DB39A", text)
+        self.assertLess(text.index("#D9734E"), text.index("#9DB39A"))     # dominant colour first
+        with self.assertRaises(SystemExit):                               # never overwrites
+            self.run_export("style", p, "--out", out)
+
+    def test_blur_pad_canvas(self):
+        src = os.path.join(self.tmp, "tall.png")
+        _PIL.new("RGB", (800, 1200), (200, 30, 30)).save(src)
+        code, _, err = self.run_export(src, "--size", "1920x1080", "--fit", "pad", "--pad-color", "blur")
+        self.assertEqual(code, 0, err)
+        im = _PIL.open(os.path.join(self.tmp, "tall_1920x1080.jpg")).convert("RGB")
+        self.assertEqual(im.size, (1920, 1080))
+        self.assertGreater(im.getpixel((960, 540))[0], 180)               # original in the centre
+        self.assertNotEqual(im.getpixel((20, 540)), (255, 255, 255))      # sides filled, not white
+
     def test_final_size_exact(self):
         src = os.path.join(self.tmp, "big.png")
         _PIL.new("RGB", (2048, 2048), (10, 20, 30)).save(src)
